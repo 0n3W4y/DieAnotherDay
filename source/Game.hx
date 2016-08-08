@@ -3,8 +3,9 @@ package;
 class Game 
 {
 
-	private var currentScene:Dynamic;
+	private var _currentScene:Dynamic;
 	private var _mainSprite:Main;
+	private var _allScenes:Array<Dynamic>;
 
 	public function new(mainSprite)
 	{
@@ -14,9 +15,11 @@ class Game
 
 	public function init()
 	{
-		
-		currentScene  = new WelcomeScene(this);
-		_mainSprite.addChild(currentScene);
+		_allScenes = new Array();
+		//create some starting scenes like options, load, etc;
+		_currentScene  = new WelcomeScene(this);
+		_mainSprite.addChild(_currentScene);
+		_allScenes.push(_currentScene);
 
 	}
 
@@ -25,13 +28,13 @@ class Game
 
 	}
 
-	public function toGame()
+	public function toPlayingScene()
 	{
-		
+		trace("I'm work");
 	}
 
 	public function toOptions()
 	{
-		
+
 	}
 }

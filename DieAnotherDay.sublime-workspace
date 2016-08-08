@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"_",
+				"_startGameButton	openfl.display.Sprite"
+			],
+			[
+				"TextFo",
+				"TextFormat	openfl.text"
+			],
+			[
+				"dra",
+				"drawRoundRect(...)	Void"
+			],
+			[
+				"Mouse",
+				"MouseEvent	openfl.events"
+			],
+			[
+				"Mou",
+				"MouseEvent	flash.events"
+			],
+			[
+				"startGameBut",
+				"startGameButtonText	openfl.text.TextField"
+			],
+			[
+				"start",
+				"startGameButtonText"
+			],
+			[
 				"s",
 				"Sprite"
 			],
@@ -74,10 +102,6 @@
 			[
 				"rec",
 				"scrollRect	openfl.geom.Rectangle"
-			],
-			[
-				"_",
-				"_turnTimer	flash.utils.Timer"
 			],
 			[
 				"Timer",
@@ -490,30 +514,6 @@
 			[
 				"upda",
 				"updateUIfightingLog"
-			],
-			[
-				"res",
-				"respawnDelta"
-			],
-			[
-				"clas",
-				"className"
-			],
-			[
-				"cons",
-				"timeToConsole"
-			],
-			[
-				"tim",
-				"timeToConsole"
-			],
-			[
-				"ali",
-				"alive"
-			],
-			[
-				"up",
-				"updateUIfightingLog"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "source/Main.hx",
 			"settings":
 			{
-				"buffer_size": 427,
+				"buffer_size": 447,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "source/Game.hx",
 			"settings":
 			{
-				"buffer_size": 365,
+				"buffer_size": 587,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "source/WelcomeScene.hx",
 			"settings":
 			{
-				"buffer_size": 722,
+				"buffer_size": 2414,
 				"line_ending": "Windows"
 			}
 		}
@@ -583,6 +583,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/UserInterface.hx",
+		"/C/projects/DieAnotherDay/.gitignore",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Main.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Scene.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Game.hx",
@@ -595,10 +598,8 @@
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneGroundActor.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneActor.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/TimeMaster.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/GameTurnControl.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Weapon.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/UserInterface.hx",
 		"/C/Users/Admin/AppData/Local/Temp/7zO8E55456E/HelloWorld.as",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Input.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/BotEvent.hx",
@@ -755,7 +756,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -764,15 +765,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 427,
+						"buffer_size": 447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								423,
-								423
+								440,
+								440
 							]
 						],
 						"settings":
@@ -782,7 +783,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -794,44 +795,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 365,
+						"buffer_size": 587,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								360,
-								360
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "source/WelcomeScene.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 722,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								251,
-								251
+								524,
+								524
 							]
 						],
 						"settings":
@@ -844,6 +816,35 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/WelcomeScene.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2325,
+								2325
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
