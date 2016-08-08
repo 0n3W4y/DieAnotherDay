@@ -3,8 +3,6 @@
 -D openfl=4.0.3
 -cp C:/HaxeToolkit/haxe/lib/lime/3,0,3
 -D lime=3.0.3
--cp C:/HaxeToolkit/haxe/lib/swf/2,2,3
--D swf=2.2.3
 -cp Source
 -cp C:\HaxeToolkit\haxe\lib/openfl/4,0,3/externs/core/flash
 -cp C:\HaxeToolkit\haxe\lib/openfl/4,0,3/externs/core/openfl
@@ -16,7 +14,7 @@
 -D web
 -swf-lib Export/flash/release/obj/assets.swf
 -swf-version 11.2
--swf Export/flash/release/bin/UsingSWFAssets.swf
--swf-header 800:600:30:FFFFFF
+-swf Export/flash/release/bin/DieAnotherDay.swf
+-swf-header 1280:720:60:000000
 -cp Export/flash/release/haxe
 -debug

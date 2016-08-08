@@ -5,22 +5,29 @@ import openfl.display.Bitmap;
 import openfl.display.BitmapData;
 import openfl.display.Sprite;
 import openfl.Assets;
-
+import openfl.Lib;
 
 class Main extends Sprite {
 	
+	private var game:Game;
+	private var isCreated:Bool = false;
 	
-	public function new () {
-		
+	public function new () 
+	{
 		super ();
 		
-		var bitmap = new Bitmap (Assets.getBitmapData ("assets/images/openfl.png"));
-		addChild (bitmap);
-		
-		bitmap.x = (stage.stageWidth - bitmap.width) / 2;
-		bitmap.y = (stage.stageHeight - bitmap.height) / 2;
+		init();
 		
 	}
-	
+	private function init()
+	{
+		if(!isCreated) createGame();
+	}
+
+	private function createGame()
+	{
+		game = new Game(this);
+		isCreated = true;
+	}
 	
 }

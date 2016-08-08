@@ -60,10 +60,13 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		#end
 		
 		#if flash
 		
+		className.set ("assets/images/dadlogo.png", __ASSET__assets_images_dadlogo_png);
+		type.set ("assets/images/dadlogo.png", AssetType.IMAGE);
 		className.set ("assets/images/openfl.png", __ASSET__assets_images_openfl_png);
 		type.set ("assets/images/openfl.png", AssetType.IMAGE);
 		
@@ -71,6 +74,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/images/dadlogo.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/openfl.png";
 		path.set (id, id);
 		
@@ -92,6 +99,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		
+		className.set ("assets/images/dadlogo.png", __ASSET__assets_images_dadlogo_png);
+		type.set ("assets/images/dadlogo.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/openfl.png", __ASSET__assets_images_openfl_png);
 		type.set ("assets/images/openfl.png", AssetType.IMAGE);
@@ -740,10 +750,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__assets_images_dadlogo_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_openfl_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 
 
 #elseif html5
+
 
 
 
@@ -755,6 +767,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux || cpp)
 
 
+@:image("Assets/images/dadlogo.png") #if display private #end class __ASSET__assets_images_dadlogo_png extends lime.graphics.Image {}
 @:image("Assets/images/openfl.png") #if display private #end class __ASSET__assets_images_openfl_png extends lime.graphics.Image {}
 
 

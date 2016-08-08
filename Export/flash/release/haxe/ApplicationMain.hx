@@ -30,6 +30,10 @@ class ApplicationMain {
 		var types = [];
 		
 		
+		urls.push ("assets/images/dadlogo.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/openfl.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -99,31 +103,31 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "12",
-			company: "OpenFL",
-			file: "UsingSWFAssets",
-			fps: 30,
-			name: "Using SWF Assets",
+			build: "38",
+			company: "Company Name",
+			file: "DieAnotherDay",
+			fps: 60,
+			name: "DieAnotherDay",
 			orientation: "",
-			packageName: "org.openfl.tutorials.usingswfassets",
+			packageName: "com.sample.dieanotherday",
 			version: "1.0.0",
 			windows: [
 				
 				{
 					antialiasing: 0,
-					background: 16777215,
+					background: 0,
 					borderless: false,
 					depthBuffer: false,
 					display: 0,
 					fullscreen: false,
 					hardware: true,
-					height: 600,
+					height: 720,
 					parameters: "{}",
 					resizable: true,
 					stencilBuffer: true,
-					title: "Using SWF Assets",
+					title: "DieAnotherDay",
 					vsync: false,
-					width: 800,
+					width: 1280,
 					x: null,
 					y: null
 				},
@@ -141,7 +145,7 @@ class ApplicationMain {
 		
 		#if (js && html5)
 		#if (munit || utest)
-		lime.system.System.embed (null, 800, 600, "FFFFFF");
+		lime.system.System.embed (null, 1280, 720, "000000");
 		#end
 		#else
 		create ();

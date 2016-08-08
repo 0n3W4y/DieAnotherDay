@@ -10,7 +10,9 @@
 	
 	<assets path="Assets" rename="assets" />
 
+	<window background="#000000" fps="60" />
 
+	<window width="1280" height="720" unless="mobile" />
 	
 </project>
 

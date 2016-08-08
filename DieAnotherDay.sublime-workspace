@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"Sprite"
+			],
+			[
 				"E",
 				"Event	class"
 			],
@@ -268,10 +272,6 @@
 				"B2Contact	box2D.dynamics.contacts"
 			],
 			[
-				"s",
-				"shape1	box2D.collision.shapes.B2Shape"
-			],
-			[
 				"setC",
 				"setContactListener(...)	Void"
 			],
@@ -523,16 +523,24 @@
 			"file": "source/Main.hx",
 			"settings":
 			{
-				"buffer_size": 425,
+				"buffer_size": 427,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "project.xml",
+			"file": "source/Game.hx",
 			"settings":
 			{
-				"buffer_size": 330,
-				"line_ending": "Unix"
+				"buffer_size": 365,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/WelcomeScene.hx",
+			"settings":
+			{
+				"buffer_size": 722,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -575,13 +583,15 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Main.hx",
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Scene.hx",
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Game.hx",
 		"/C/projects/DieAnotherDay/project.xml",
 		"/C/projects/DieAnotherDay/source/Ball.hx",
 		"/C/projects/DieAnotherDay/source/Platform.hx",
 		"/C/projects/DieAnotherDay/DisplayingABitmap/Source/Main.hx",
 		"/C/projects/DieAnotherDay/DisplayingABitmap/project.xml",
 		"/C/projects/DieAnotherDay/source/Main.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Main.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneGroundActor.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneActor.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/TimeMaster.hx",
@@ -589,12 +599,10 @@
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/GameTurnControl.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Weapon.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/UserInterface.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Scene.hx",
 		"/C/Users/Admin/AppData/Local/Temp/7zO8E55456E/HelloWorld.as",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Input.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/BotEvent.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneBotActor.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Game.hx",
 		"/C/Users/Admin/Desktop/teaching/TooManyShoots/source/Camera.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/GameTimer.hx",
 		"/C/Users/Admin/Desktop/teaching/TooManyShoots/source/Main.hx",
@@ -747,7 +755,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -756,15 +764,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 425,
+						"buffer_size": 427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								425,
-								425
+								423,
+								423
 							]
 						],
 						"settings":
@@ -774,39 +782,68 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "project.xml",
+					"file": "source/Game.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 330,
+						"buffer_size": 365,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								330,
-								330
+								360,
+								360
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/WelcomeScene.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251,
+								251
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
