@@ -23,18 +23,56 @@ class Game
 
 	}
 
-	public function toWellcomeScreen()
+	public function toWelcomeScene()
 	{
+		if (_currentScene != WelcomeScene)
+			_mainSprite.removeChild(_currentScene);
+
+		for (i in 0..._allScenes.length)
+		{
+			var scene = _allScenes[i];
+			if (Std.is(scene, WelcomeScene))
+			{
+				_currentScene = scene;
+				_mainSprite.addChild(scene);
+				return;
+			}
+		}
+
+		var welcomeScene = new WelcomeScene(this);
+		_currentScene = welcomeScene;
+		_mainSprite.addChild(welcomeScene);
 
 	}
 
 	public function toPlayingScene()
 	{
-		trace("I'm work");
+		if (_currentScene != PlayingScene)
+			_mainSprite.removeChild(_currentScene);
+
+		for (i in 0..._allScenes.length)
+		{
+			var scene = _allScenes[i];
+			if (Std.is(scene, PlayingScene))
+			{
+				_currentScene = scene;
+				_mainSprite.addChild(scene);
+				return;
+			}
+		}
+
+		var playingScene = new PlayingScene(this);
+		_currentScene = playingScene;
+		_mainSprite.addChild(playingScene);
 	}
 
-	public function toOptions()
+	public function toOptionScene()
 	{
 
+	}
+
+	public function toScene(scene)
+	{
+		
 	}
 }

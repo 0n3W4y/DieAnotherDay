@@ -42,7 +42,7 @@ class WelcomeScene extends Sprite
 
 	private function createButtons()
 	{
-		var _startGameButton = new Sprite();
+		_startGameButton = new Sprite();
 		_startGameButton.graphics.beginFill( 0xFF0000 );
         _startGameButton.graphics.drawRoundRect( 0, 0, 180, 40, 10, 10 );
         _startGameButton.graphics.endFill();
@@ -70,10 +70,10 @@ class WelcomeScene extends Sprite
 
 	private function onClick( event:MouseEvent )
     {
-    	//_startGameButton.graphics.clear();
-    	//_startGameButton.graphics.beginFill(0x00ff00);
+    	_startGameButton.graphics.clear();
+    	_startGameButton.graphics.beginFill(0x00ff00);
     	//_startGameButton.graphics.drawRoundRect( 0, 0, 180, 40, 10, 10 );
-    	//_startGameButton.graphics.endFill();
+    	_startGameButton.graphics.endFill();
 
         //go to game and start playing Scene;
         _myGame.toPlayingScene();
