@@ -37,76 +37,69 @@ class PlayingScene extends Sprite
 
 	private function createLevelGround()
 	{
-		generateMapGrid(200, true, true);
+		var gridSize = 200;
+		var rocks = 4;
+		var water = 0 // 0 - lake, 1 - river
+
+		generateMapGrid(gridSize, numberOfRocks, waterElement);
 	}
 
 	private function generateMapGrid(size, rocks, water)
 	{
-		_mapGridSize = size;
+		generateEarth(size);
+
 		var rocksArray = null;
 		var waterArray = null;
-		if (rocks)
-			rocksArray =  generateRocks(size);
+		
+		if (rocks > 0)
+			rocksArray =  generateRocks(size, rocks);
 
-		if (water)
-			waterArray = generateWater(size);
-
-
-		_mapGrid = new Array();
-
-		// 2 - rocks, 0 - earth; 1 - water
-
-		for (i 0..._mapGridSize-1)
-		{
-			var array = new Array();
-			var lastNum = null;
-
-			for (j 0..._mapGridSize-1)
-			{
-				var num = Math.floor(Math.random() * 3);
-
-				if (lastNum == null && maxRocks > 0 && maxWater > 0)
-				{
-					array.push(num);
-					lastNum = num;
-				}
-				else if (maxRocks > 0 && maxWater > 0)
-				{
-					if (lastNum == num)
-					{
-						array.push(num);
-					}
-				}
-
-
-
-
-
-
-
-
-				if (maxRocks >= 0)
-				{
-					var num = Math.floor(Math.random() * 3);
-				}
-				else
-				{
-					array.push(0);
-				}
-
-			}
-			_mapGrid.push(array);
-		}
+		if (water != null)
+			waterArray = generateWater(size, water);		
 	}
 
-	private function generateRocks(size)
+	private function generateRocks(size, rocks)
 	{
 		var gridSize = size*size;
 		var num = Math.floor(Math.random());
 	}
 
-	private function generateWater(size)
+	private function generateWater(size, water)
 	{
 		var gridSize = size*size;
+
+		if (water > 0)
+		{
+			//in future can use % of all ground if we want to generate climate, so we can control how many water in this level
+			// right now i take min parametrs for test my generator;
+			riverMaxSize = 10;
+			riverMinSize = 5;
+
+			
+
+		}
+		else
+		{
+
+		}
+	}
+
+	private function generateEarth(size)
+	{
+		_mapGrid = new Array();
+
+		for (i 0...size-1)
+		{
+			var array = new Array();
+
+			for (j 0...size-1)
+			{
+				array.push(0);
+			}
+
+			_mapGrid.push(array);
+		}
+
+		trace("Map length = " + _mapGrid.length);
 	}
 }

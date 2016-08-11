@@ -10,11 +10,13 @@ class Tile
 
 	public function new(type)
 	{
-		//for test 2 ground types, earth and rocks, rocks have a block, 
+		//for test 3 ground types, earth and rocks, rocks have a block, 
 		if (type == "Rock") 
 			createRockTile();
-		else
+		else if (type == "Earth")
 			createEarthTile();
+		else
+			createWaterTile();
 	}
 
 	private function createRockTile()
@@ -23,7 +25,7 @@ class Tile
 		blockType = "cubic";
 		blockHp = 500;
 		coverType = "rock";
-		effect = null;
+		effect = "roof";
 	}
 
 	private function createErathTile()
@@ -33,5 +35,14 @@ class Tile
 		blockHp = -1;
 		coverType = "earth";
 		effect = "grass";
+	}
+
+	private function createWaterTile()
+	{
+		groundType = "water";
+		blockType = "flat";
+		blockHp = -1;
+		coverType = "water";
+		effect = "water";
 	}
 }
