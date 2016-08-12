@@ -2,11 +2,11 @@ package;
 
 class Tile 
 {
-	public var groundType;
-	public var blockType;
-	public var blockHp;
-	public var coverType;
-	public var effect;
+	public var groundType:String;
+	public var blockType:String;
+	public var blockHp:Int;
+	public var coverType:String;
+	public var effect:String;
 
 	public function new(type)
 	{
@@ -28,7 +28,7 @@ class Tile
 		effect = "roof";
 	}
 
-	private function createErathTile()
+	private function createEarthTile()
 	{
 		groundType = "earth";
 		blockType = "flat";

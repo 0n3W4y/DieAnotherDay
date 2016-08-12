@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"create",
+				"createWaterTile(  )	Void"
+			],
+			[
+				"maxNub",
+				"maxNumberOfWater	var"
+			],
+			[
 				"Rock",
 				"Rock"
 			],
@@ -506,14 +514,6 @@
 			[
 				"class",
 				"className"
-			],
-			[
-				"place",
-				"place"
-			],
-			[
-				"stop",
-				"stopLoop"
 			]
 		]
 	},
@@ -539,7 +539,7 @@
 			"file": "source/PlayingScene.hx",
 			"settings":
 			{
-				"buffer_size": 1179,
+				"buffer_size": 1792,
 				"line_ending": "Windows"
 			}
 		},
@@ -555,7 +555,7 @@
 			"file": "source/Tile.hx",
 			"settings":
 			{
-				"buffer_size": 602,
+				"buffer_size": 802,
 				"line_ending": "Windows"
 			}
 		}
@@ -599,6 +599,7 @@
 	],
 	"file_history":
 	[
+		"/C/projects/DieAnotherDay/source/Tile.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ContactListener.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/UserInterface.hx",
@@ -840,15 +841,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1179,
+						"buffer_size": 1792,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								396,
-								396
+								1509,
+								1509
 							]
 						],
 						"settings":
@@ -857,7 +858,7 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 1035.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -886,10 +887,10 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 810.0,
+						"translation.y": 801.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -898,27 +899,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 602,
+						"buffer_size": 802,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								554,
-								554
+								501,
+								501
 							]
 						],
 						"settings":
 						{
 							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
