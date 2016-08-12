@@ -2,47 +2,46 @@ package;
 
 class Tile 
 {
-	public var groundType:String;
-	public var blockType:String;
+	public var groundType:Int;
+	public var blockType:Int;
 	public var blockHp:Int;
-	public var coverType:String;
-	public var effect:String;
+	public var coverType:Int;
+	public var effect:Int;
 
 	public function new(type)
 	{
-		//for test 3 ground types, earth and rocks, rocks have a block, 
-		if (type == "Rock") 
-			createRockTile();
-		else if (type == "Earth")
+		if (type == "earth")
 			createEarthTile();
+		else if (type == "rock")
+			createRockTile();
 		else
 			createWaterTile();
 	}
 
 	private function createRockTile()
 	{
-		groundType = "rock";
-		blockType = "cubic";
-		blockHp = 500;
-		coverType = "rock";
-		effect = "roof";
+		groundType = 1; // 0 -earth, 1 - rock, 2 - water;
+		blockType = 2; // 1- flat, 2 cubic;
+		blockHp = 500; // -1 - no hp
+		coverType = 1; // 0 - earth, 1- rock, 2 - water
+		effect = 0; // 0 - no effects;
 	}
 
 	private function createEarthTile()
 	{
-		groundType = "earth";
-		blockType = "flat";
+		groundType = 0;
+		blockType = 1;
 		blockHp = -1;
-		coverType = "earth";
-		effect = "grass";
+		coverType = 0;
+		effect = 0;
 	}
 
 	private function createWaterTile()
 	{
-		groundType = "water";
-		blockType = "flat";
+		groundType = 1;
+		blockType = 1;
 		blockHp = -1;
-		coverType = "water";
-		effect = "water";
+		coverType = 1;
+		effect = 0;
 	}
 }
