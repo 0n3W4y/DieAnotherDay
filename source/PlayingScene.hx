@@ -40,12 +40,18 @@ class PlayingScene extends Sprite
 	private function createLevelGround()
 	{
 		var gridSize = 200;
-		var ground = "earth";
-		var rocks = 4; // 0 - no rocks
-		var water = 1; // 0 - lake, 1 - river, -1 - no water;
 
+		var ground = "earth";
 		generateMapGrid(gridSize, ground);
-		generateWater(gridSize, water);
+
+		var liquid = "water";
+		var liquidType= 1; // 0 - lake, 1 - river, -1 - no water;
+		generateLiquids(gridSize, liquid, liquidType);
+
+		var kind = "stone";
+		var kindValue = 4;
+		generateRocks(gridSize, kind, value);
+
 		trace(_tileMap.tile);
 
 	}
@@ -56,16 +62,16 @@ class PlayingScene extends Sprite
 		fillFloor(ground);
 	}
 
-	private function generateRocks(size:Int, rocks:Int)
+	private function generateRocks(size:Int, kind:String, value:Int)
 	{
 		var gridSize = size;
 	}
 
-	private function generateWater(size:Int, water:Int)
+	private function generateWater(size:Int, liquid:String, type:Int)
 	{
 		var gridSize = size;
 
-		if (water > 0) // generate river. Right now i made line river across all map, in future i'll do random river with angle;
+		if (type == 1) // generate river. Right now i made line river across all map, in future i'll do random river with angle;
 		{
 			//in future can use % of all ground if we want to generate climate, so we can control how many water in this level
 			// right now i take min parametrs for test my generator;
@@ -102,7 +108,7 @@ class PlayingScene extends Sprite
 
 				for ( x in 0...riverSize)
 				{
-					_tileMap.tile[y*gridSize + lastLeftPoint + x] = new Tile("water");
+					_tileMap.tile[y*gridSize + lastLeftPoint + x] = new Tile(liquid);
 
 					// if my point in the right end of map, we can end river or break some errors;
 					if (gridSize - lastLeftPoint < x )

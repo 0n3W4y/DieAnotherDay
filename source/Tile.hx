@@ -12,10 +12,11 @@ class Tile
 	{
 		if (type == "earth")
 			createEarthTile();
-		else if (type == "rock")
+		else if (type == "stone")
 			createRockTile();
-		else
+		else if (type == "water")
 			createWaterTile();
+		else
 	}
 
 	private function createRockTile()
