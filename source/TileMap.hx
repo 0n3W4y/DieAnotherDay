@@ -6,7 +6,7 @@ class TileMap
 {
 	public var width : Int;
 	public var height : Int;
-	public var tile : Vector<Tile>;
+	public var tile : Vector<Tiles>;
 
 	public function new(w:Int, h:Int)
 	{
