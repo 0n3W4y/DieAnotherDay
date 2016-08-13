@@ -9,6 +9,8 @@ import openfl.display.Tilemap;
 import openfl.display.Tileset;
 import openfl.display.Tile;
 import openfl.geom.Rectangle;
+import openfl.events.MouseEvent;
+import openfl.events.Event;
 
 
 import Math;
@@ -33,12 +35,14 @@ class PlayingScene extends Sprite
 	private function init()
 	{
 		createLevel();
+		addEventListener (MouseEvent.MOUSE_WHEEL, onScroll);
+		addEventListener (Event.ENTER_FRAME, onEnterFrame);
 	}
 
 	private function createLevel()
 	{
 		createLevelGround();
-		//createTilesheet();
+		createTilesheet();
 	}
 
 	private function createLevelGround()
@@ -172,10 +176,14 @@ class PlayingScene extends Sprite
 		}
 
 	}
-/*
+
 	private function createTilesheet()
 	{
+		var gridSize = 200;
+		var tileSize = 64;
+
 		var tilesBitmapData:BitmapData = Assets.getBitmapData("assets/images/ground_tile.png");
+		var tilesBitmapDataRectangles = new Array();
 		var tileset = new Tileset(tilesBitmapData);
 		tileset.addRect(new Rectangle(0, 0, 64, 64)); //grass, earth 0
 		tileset.addRect(new Rectangle(64, 0, 64, 64)); //water 1
@@ -183,8 +191,8 @@ class PlayingScene extends Sprite
 		tileset.addRect(new Rectangle(192, 0, 64, 64)); //sand 3
 		tileset.addRect(new Rectangle(256, 0, 64, 64)); //desert 4
 
-		var tilemap = new Tilemap(200, 200);
-		var layer = new TilemapLayer(tileset);
+		var tilemap = new Tilemap(gridSize*tileSize, gridSize*tileSize, tileset);
+		
 
 		for (row in 0...gridSize)
 		{
@@ -192,12 +200,32 @@ class PlayingScene extends Sprite
 			{
 				var tile = _tileMap.tile[gridSize*row + cell];
 				var tilePic = tile.groundType;
-				layer.addTile (new Tile (tilePic, cell*gridSize, row*gridSize));
+				tilemap.addTile (new Tile (tilePic, cell*tileSize, row*tileSize));
 			}
 		}
 
-		tilemap.addLayer(layer);
 		addChild(tilemap);
 	}
-	*/
+
+	private function onScroll(e:MouseEvent)
+	{
+		if (e.delta > 0)
+       	{	
+       		root.scaleX += 0.1;
+       		root.scaleY += 0.1;
+       	}
+    	else if (e.delta < 0)
+    	{
+        	root.scaleX -= 0.1;
+        	root.scaleY -= 0.1;
+    	}
+	}
+
+	private function onEnterFrame(e:Event)
+	{
+
+	}
+
+
+	
 }
