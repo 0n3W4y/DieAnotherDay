@@ -12,7 +12,7 @@
 
 	<window background="#000000" fps="60" />
 
-	<window width="1920" height="1080" unless="mobile" />
+	<window width="1280" height="720" unless="mobile" />
 	
 </project>
 

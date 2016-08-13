@@ -11,6 +11,7 @@ import openfl.display.Tile;
 import openfl.geom.Rectangle;
 import openfl.events.MouseEvent;
 import openfl.events.Event;
+import flash.events.KeyboardEvent;
 
 
 import Math;
@@ -35,13 +36,15 @@ class PlayingScene extends Sprite
 
 	private function init()
 	{
-		createCamera();
+		
 		createLevel();
 		addEventListener (MouseEvent.MOUSE_WHEEL, onScroll);
+		Lib.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 		addEventListener (Event.ENTER_FRAME, onEnterFrame);
+		createUserInterface();
 	}
 
-	private function createCamera()
+	private function createUserInterface()
 	{
 		_userInterface = new UserInterface(this);
 		addChild(_userInterface);
@@ -130,7 +133,7 @@ class PlayingScene extends Sprite
 							_tileMap.tile[firstTopPoint + lastLeftPoint + x] = new Tiles(kind);
 					}
 
-					if (gridSize - lastLeftPoint < x )
+					if (gridSize - lastLeftPoint <= x )
 						break;
 				}
 
@@ -185,7 +188,7 @@ class PlayingScene extends Sprite
 					_tileMap.tile[y*gridSize + lastLeftPoint + x] = new Tiles(liquid);
 
 					// if my point in the right end of map, we can end river or break some errors;
-					if (gridSize - lastLeftPoint < x )
+					if (gridSize - lastLeftPoint <= x )
 						break;
 				}
 			}
@@ -240,7 +243,7 @@ class PlayingScene extends Sprite
 
 	private function onEnterFrame(e:Event)
 	{
-
+		_userInterface.update();
 	}
 
 	public function getUserInterface()
@@ -252,14 +255,56 @@ class PlayingScene extends Sprite
 	{
 		if (e.delta > 0)
        	{	
-       		root.scaleX += 0.1;
-       		root.scaleY += 0.1;
+       		this.scaleX += 0.1;
+       		this.scaleY += 0.1;
        	}
     	else if (e.delta < 0)
     	{
-        	root.scaleX -= 0.1;
-        	root.scaleY -= 0.1;
+    		if (this.scaleX >= 0.2)
+    		{
+    			this.scaleX -= 0.1;
+        		this.scaleY -= 0.1;
+    		}        	
     	}
+	}
+
+	private function onKeyUp(e:KeyboardEvent)
+	{
+		/*
+		if (e.keyCode == 87) //w
+			//_moveSceneUp = false;
+
+		if (e.keyCode == 65) //a
+			//_moveSceneLeft = false;
+
+		if (e.keyCode == 68) //d
+			//_moveSceneRight = false;
+
+		if (e.keyCode == 83) //s
+			//_moveSceneDown = false;
+		*/
+	}
+
+	private function onKeyDown(e:KeyboardEvent)
+	{
+		if (e.keyCode == 87) //w
+		{
+			this.y += 10/root.scaleX;
+		}
+		else if (e.keyCode == 65) //a
+		{
+			this.x += 10/root.scaleX;
+		}
+		else if (e.keyCode == 68) //d
+		{
+			this.x -= 10/root.scaleX;
+		}
+		else if (e.keyCode == 83) //s
+		{
+			this.y -= 10/root.scaleX;
+		}
+
+
 	}
 
 

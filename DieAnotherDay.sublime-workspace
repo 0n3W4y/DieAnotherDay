@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"Key",
+				"KeyboardEvent	openfl.events"
+			],
+			[
+				"ground",
+				"groundType"
+			],
+			[
+				"gro",
+				"groundType	Int"
+			],
+			[
+				"cure",
+				"currentRockSizeX"
+			],
+			[
+				"last",
+				"lastSizeX"
+			],
+			[
+				"rock",
+				"rocksMinSize	var"
+			],
+			[
+				"ro",
+				"rocksMaxSize	var"
+			],
+			[
+				"MouseEv",
+				"MouseEvent	openfl.events"
+			],
+			[
+				"event",
+				"Event	openfl.events"
+			],
+			[
+				"Mou",
+				"MouseEvent	openfl.events"
+			],
+			[
+				"Event",
+				"Event	openfl.events"
+			],
+			[
+				"tiles",
+				"tilesBitmapDataRectangles	Array<openfl.geom.Rectangle>"
+			],
+			[
+				"Rect",
+				"Rectangle	openfl.geom"
+			],
+			[
+				"Tile",
+				"Tile	openfl.display"
+			],
+			[
+				"rocks",
+				"rocksMinSize	Int"
+			],
+			[
 				"_",
 				"_tileMap"
 			],
@@ -34,10 +94,6 @@
 			[
 				"Mouse",
 				"MouseEvent	openfl.events"
-			],
-			[
-				"Mou",
-				"MouseEvent	flash.events"
 			],
 			[
 				"startGameBut",
@@ -244,10 +300,6 @@
 				"removeEventListener(...)	Void"
 			],
 			[
-				"Event",
-				"Event	flash.events"
-			],
-			[
 				"sha",
 				"shapes"
 			],
@@ -368,10 +420,6 @@
 				"PlayerActor	class"
 			],
 			[
-				"event",
-				"EventDispatcher	flash.events"
-			],
-			[
 				"setL",
 				"setLinearVelocity(...)	Void"
 			],
@@ -466,54 +514,6 @@
 			[
 				"de",
 				"m_density	Float"
-			],
-			[
-				"_whee",
-				"_wheelFixture"
-			],
-			[
-				"wh",
-				"wheel	var"
-			],
-			[
-				"ADD",
-				"ADDED_TO_STAGE	String"
-			],
-			[
-				"ev",
-				"Event"
-			],
-			[
-				"ge",
-				"getMidpoint"
-			],
-			[
-				"FlxC",
-				"FlxColor"
-			],
-			[
-				"FlxBu",
-				"FlxButton	flixel.ui"
-			],
-			[
-				"time",
-				"timeToConsole"
-			],
-			[
-				"loot",
-				"lootObject"
-			],
-			[
-				"onS",
-				"onStackObject"
-			],
-			[
-				"loo",
-				"lootObject"
-			],
-			[
-				"item",
-				"itemInBag"
 			]
 		]
 	},
@@ -536,10 +536,26 @@
 			}
 		},
 		{
+			"file": "source/UserInterface.hx",
+			"settings":
+			{
+				"buffer_size": 266,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "source/PlayingScene.hx",
 			"settings":
 			{
-				"buffer_size": 3183,
+				"buffer_size": 7822,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
+			"settings":
+			{
+				"buffer_size": 14750,
 				"line_ending": "Windows"
 			}
 		},
@@ -547,7 +563,7 @@
 			"file": "source/TileMap.hx",
 			"settings":
 			{
-				"buffer_size": 247,
+				"buffer_size": 248,
 				"line_ending": "Windows"
 			}
 		},
@@ -560,10 +576,10 @@
 			}
 		},
 		{
-			"file": "source/Tile.hx",
+			"file": "source/Tiles.hx",
 			"settings":
 			{
-				"buffer_size": 837,
+				"buffer_size": 847,
 				"line_ending": "Windows"
 			}
 		}
@@ -603,20 +619,27 @@
 		"/C/projects/DieAnotherDay",
 		"/C/projects/DieAnotherDay/source",
 		"/C/HaxeToolkit/haxe/lib/openfl",
-		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3"
+		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3",
+		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3/openfl/display"
 	],
 	"file_history":
 	[
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
+		"/C/projects/DieAnotherDay/project.xml",
+		"/C/projects/openfl-samples-master/demos/BunnyMark/Source/Main.hx",
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Scene.hx",
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/UserInterface.hx",
+		"/C/projects/openfl-samples-master/demos/TextAlignment/Source/Main.hx",
+		"/C/projects/openfl-samples-master/demos/BunnyMark/Source/Bunny.hx",
+		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/Tile.hx",
+		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/PiratePigGame.hx",
+		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/PiratePig.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/GameTurnControl.hx",
 		"/C/projects/DieAnotherDay/source/Tile.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ContactListener.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/UserInterface.hx",
 		"/C/projects/DieAnotherDay/.gitignore",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Main.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Scene.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Game.hx",
-		"/C/projects/DieAnotherDay/project.xml",
 		"/C/projects/DieAnotherDay/source/Ball.hx",
 		"/C/projects/DieAnotherDay/source/Platform.hx",
 		"/C/projects/DieAnotherDay/DisplayingABitmap/Source/Main.hx",
@@ -723,9 +746,10 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"Tile",
 			");\n",
 			"reset",
 			"actorToRemove",
@@ -765,6 +789,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Tiles",
 			"world_scale",
 			"w",
 			"W",
@@ -781,7 +806,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -797,8 +822,8 @@
 						"selection":
 						[
 							[
-								267,
-								267
+								357,
+								357
 							]
 						],
 						"settings":
@@ -811,7 +836,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -827,8 +852,8 @@
 						"selection":
 						[
 							[
-								1338,
-								1338
+								477,
+								477
 							]
 						],
 						"settings":
@@ -837,7 +862,7 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 918.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -845,48 +870,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "source/PlayingScene.hx",
+					"file": "source/UserInterface.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3183,
+						"buffer_size": 266,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								158,
-								158
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "source/TileMap.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 247,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								173,
-								173
+								259,
+								259
 							]
 						],
 						"settings":
@@ -902,7 +898,95 @@
 					"type": "text"
 				},
 				{
+					"buffer": 3,
+					"file": "source/PlayingScene.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7573,
+								7573
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4706.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
 					"buffer": 4,
+					"file": "/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2430.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/TileMap.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								246,
+								246
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "source/WelcomeScene.hx",
 					"semi_transient": false,
 					"settings":
@@ -924,27 +1008,27 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 801.0,
+						"translation.y": 766.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "source/Tile.hx",
+					"buffer": 7,
+					"file": "source/Tiles.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 837,
+						"buffer_size": 847,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								329,
-								329
+								21,
+								21
 							]
 						],
 						"settings":
@@ -954,10 +1038,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1002,7 +1086,7 @@
 	"project": "DieAnotherDay.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
