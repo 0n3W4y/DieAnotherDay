@@ -18,7 +18,8 @@ import Math;
 class PlayingScene extends Sprite
 {	
 	private var _myGame:Game;
-	private var _tileMap:TileMap;	
+	private var _tileMap:TileMap;
+	private var _userInterface:UserInterface;
 
 	private var _maxSceneWidth:Int = 400; // cause 200 map size;
 	private var _maxSceneHeight:Int = 400;
@@ -34,9 +35,16 @@ class PlayingScene extends Sprite
 
 	private function init()
 	{
+		createCamera();
 		createLevel();
 		addEventListener (MouseEvent.MOUSE_WHEEL, onScroll);
 		addEventListener (Event.ENTER_FRAME, onEnterFrame);
+	}
+
+	private function createCamera()
+	{
+		_userInterface = new UserInterface(this);
+		addChild(_userInterface);
 	}
 
 	private function createLevel()
@@ -73,24 +81,32 @@ class PlayingScene extends Sprite
 		var gridSize = size;
 
 		//here we can control how many rocks in our scene, and how it big, right now i made rocks by default options;
-		var rocksMaxSize:Int = 25;
-		var rocksMinSize:Int = 5;
+		var rocksMaxSize:Int = 40;
+		var rocksMinSize:Int = 25;
 
 		if (gridSize/value <= rocksMaxSize)
 			return trace("error with generate rocks");
 
 		for (i in 0...value)
 		{
-			var currentRockSizeY = Math.floor(Math.random()*(rocksMaxSize - rocksMinSize + 1) + rocksMinSize);
-			var lastLeftPoint = Math.floor(Math.random()*(gridSize - rocksMinSize + 1));
-			var firstTopPoint = Math.floor(Math.random()*(gridSize - rocksMaxSize + 1));
+			var currentRockSizeY:Int = Math.floor(Math.random()*(rocksMaxSize - rocksMinSize + 1) + rocksMinSize);
+			var lastLeftPoint:Int = Math.floor(Math.random()*(gridSize - rocksMinSize + 1));
+			var firstTopPoint:Int = 200 * Math.floor(Math.random()*(gridSize - rocksMaxSize + 1));
 
-			for (y in 0...currentRockSizeY)
+			var currentRockMaxSize:Int = rocksMaxSize;
+			var currentRockMinSize:Int = rocksMinSize;
+			var lastSizeX:Int = 0;
+
+			for (y in 1...currentRockSizeY+1)
 			{
-				var currentRockSizeX = Math.floor(Math.random()*(rocksMaxSize - rocksMinSize + 1) + rocksMinSize);
-				var rockOffset = Math.floor(Math.random()*3); // 0 - left, 1 - center, 2 - right
+				var currentRockSizeX = Math.floor(Math.random()*(currentRockMaxSize - currentRockMinSize + 1) + currentRockMinSize);
+				var rockOffset:Int = Math.floor(Math.random()*3); // 0 - left, 1 - center, 2 - right
+				firstTopPoint += gridSize;
+				
+				if (y > 1)
+					lastLeftPoint += Math.round((lastSizeX - currentRockSizeX)/2);
 
-				if (y == 0)
+				if (y == 1)
 					rockOffset = 1;
 
 				if (rockOffset == 0)
@@ -101,11 +117,26 @@ class PlayingScene extends Sprite
 				for ( x in 0...currentRockSizeX)
 				{
 					if (y*gridSize + lastLeftPoint + x >= y*gridSize)
-						_tileMap.tile[y*gridSize + lastLeftPoint + x] = new Tiles(kind);
+					{
+						var previousTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x - 1];
+						var currentTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x];
+						var nextTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x + 1];
+
+						if ((previousTile.groundType == 2 || previousTile.groundType == 0) && currentTile.groundType == 0 && nextTile.groundType == 1 || previousTile.groundType == 1 && currentTile.groundType == 0 && nextTile.groundType == 0 || currentTile.groundType == 1)
+						{
+
+						}
+						else
+							_tileMap.tile[firstTopPoint + lastLeftPoint + x] = new Tiles(kind);
+					}
 
 					if (gridSize - lastLeftPoint < x )
 						break;
 				}
+
+				currentRockMaxSize = currentRockSizeX + 3;
+				currentRockMinSize = currentRockSizeX - 3;
+				lastSizeX = currentRockSizeX;
 			}
 		}
 	}
@@ -207,6 +238,16 @@ class PlayingScene extends Sprite
 		addChild(tilemap);
 	}
 
+	private function onEnterFrame(e:Event)
+	{
+
+	}
+
+	public function getUserInterface()
+	{
+		return _userInterface;
+	}
+
 	private function onScroll(e:MouseEvent)
 	{
 		if (e.delta > 0)
@@ -219,11 +260,6 @@ class PlayingScene extends Sprite
         	root.scaleX -= 0.1;
         	root.scaleY -= 0.1;
     	}
-	}
-
-	private function onEnterFrame(e:Event)
-	{
-
 	}
 
 
