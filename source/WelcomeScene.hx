@@ -61,17 +61,17 @@ class WelcomeScene extends Sprite
 
         startGameButtonText.addEventListener( MouseEvent.CLICK, onClick );
 
-        startGameButtonText.x = (Lib.current.stage.stageWidth - startGameButtonText.width) / 2;
-        startGameButtonText.y = (Lib.current.stage.stageHeight - startGameButtonText.height) / 2 + 200;
+        startGameButtonText.x = (Lib.current.stage.stageWidth - startGameButtonText.width) / 2 + 400;
+        startGameButtonText.y = (Lib.current.stage.stageHeight - startGameButtonText.height) / 2 + 210;
 
-        _startGameButton.x = (Lib.current.stage.stageWidth - _startGameButton.width) / 2;
+        _startGameButton.x = (Lib.current.stage.stageWidth - _startGameButton.width) / 2 + 400;
         _startGameButton.y = (Lib.current.stage.stageHeight - _startGameButton.height) / 2 + 200;
 	}
 
 	private function onClick( event:MouseEvent )
     {
     	_startGameButton.graphics.clear();
-    	_startGameButton.graphics.beginFill(0x00ff00);
+    	_startGameButton.graphics.beginFill(0x00aa00);
     	//_startGameButton.graphics.drawRoundRect( 0, 0, 180, 40, 10, 10 );
     	_startGameButton.graphics.endFill();
 
