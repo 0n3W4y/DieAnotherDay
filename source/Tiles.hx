@@ -1,6 +1,6 @@
 package;
 
-class Tile 
+class Tiles
 {
 	public var groundType:Int;
 	public var blockType:Int;
@@ -17,14 +17,18 @@ class Tile
 		else if (type == "water")
 			createWaterTile();
 		else
+		{
+
+		}
+
 	}
 
 	private function createRockTile()
 	{
-		groundType = 1; // 0 -earth, 1 - rock, 2 - water;
+		groundType = 2; // 0 -earth, 2 - rock, 1 - water;
 		blockType = 2; // 1- flat, 2 cubic;
 		blockHp = 500; // -1 - no hp
-		coverType = 1; // 0 - earth, 1- rock, 2 - water
+		coverType = 2; // 0 - earth, 2- rock, 1 - water
 		effect = 0; // 0 - no effects;
 	}
 
