@@ -21,9 +21,16 @@ class PlayingScene extends Sprite
 	private var _myGame:Game;
 	private var _tileMap:TileMap;
 	private var _userInterface:UserInterface;
+	private var _gridSize:Int; // want to create always square;
 
-	private var _maxSceneWidth:Int = 400; // cause 200 map size;
-	private var _maxSceneHeight:Int = 400;
+	private var _maxSceneWidth:Int;
+	private var _maxSceneHeight:Int;
+
+	private var _groundTileLayer:Tilemap;
+	private var _groundEffectsTileLayer:Tilemap;
+	private var _characterTileLayer:Tilemap;
+
+	private var _entities = new Array();
 
 	// 0 - earth, 1 - water, 2 - rocks;
 
@@ -36,12 +43,20 @@ class PlayingScene extends Sprite
 
 	private function init()
 	{
-		
+		_gridSize = 200;
+		_maxSceneWidth = _gridSize + 50;
+		_maxSceneHeight = _gridSize + 50;
+
 		createLevel();
+		addInputs();
+		createUserInterface();
+		addEventListener (Event.ENTER_FRAME, onEnterFrame);
+	}
+
+	private function addInputs()
+	{
 		addEventListener (MouseEvent.MOUSE_WHEEL, onScroll);
 		Lib.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
-		addEventListener (Event.ENTER_FRAME, onEnterFrame);
-		createUserInterface();
 	}
 
 	private function createUserInterface()
@@ -53,48 +68,46 @@ class PlayingScene extends Sprite
 	private function createLevel()
 	{
 		createLevelGround();
-		createTilesheet();
+		createLevelGroundTileLayer();
+		//createLevelGroundEffectsLayer();
+		createCharacterLayer();
 	}
 
 	private function createLevelGround()
 	{
-		var gridSize:Int = 200;
-
 		var ground:String = "earth";
-		generateMapGrid(gridSize, ground);
+		generateMapGrid(ground);
 
 		var liquid:String = "water";
 		var liquidType:Int = 1; // 0 - lake, 1 - river, -1 - no water;
-		generateLiquids(gridSize, liquid, liquidType);
+		generateLiquids(liquid, liquidType);
 
 		var kind:String = "stone";
 		var kindValue:Int = 4; // возможно не стоит брать больше чем girdSize/rocksMaxSize,  в противном случае, камни займут всю карту, и более тоого, будет ошибка
-		generateRocks(gridSize, kind, kindValue);
+		generateRocks(kind, kindValue);
 
 	}
 
-	private function generateMapGrid(size:Int, ground:String)
+	private function generateMapGrid(ground:String)
 	{
-		_tileMap = new TileMap(size, size);
+		_tileMap = new TileMap(_gridSize, _gridSize); // layer for use data
 		fillFloor(ground);
 	}
 
-	private function generateRocks(size:Int, kind:String, value:Int)
+	private function generateRocks(kind:String, value:Int)
 	{
-		var gridSize = size;
-
 		//here we can control how many rocks in our scene, and how it big, right now i made rocks by default options;
 		var rocksMaxSize:Int = 40;
 		var rocksMinSize:Int = 25;
 
-		if (gridSize/value <= rocksMaxSize)
+		if (_gridSize/value <= rocksMaxSize)
 			return trace("error with generate rocks");
 
 		for (i in 0...value)
 		{
 			var currentRockSizeY:Int = Math.floor(Math.random()*(rocksMaxSize - rocksMinSize + 1) + rocksMinSize);
-			var lastLeftPoint:Int = Math.floor(Math.random()*(gridSize - rocksMinSize + 1));
-			var firstTopPoint:Int = 200 * Math.floor(Math.random()*(gridSize - rocksMaxSize + 1));
+			var lastLeftPoint:Int = Math.floor(Math.random()*(_gridSize - rocksMinSize + 1));
+			var firstTopPoint:Int = 200 * Math.floor(Math.random()*(_gridSize - rocksMaxSize + 1));
 
 			var currentRockMaxSize:Int = rocksMaxSize;
 			var currentRockMinSize:Int = rocksMinSize;
@@ -104,7 +117,7 @@ class PlayingScene extends Sprite
 			{
 				var currentRockSizeX = Math.floor(Math.random()*(currentRockMaxSize - currentRockMinSize + 1) + currentRockMinSize);
 				var rockOffset:Int = Math.floor(Math.random()*3); // 0 - left, 1 - center, 2 - right
-				firstTopPoint += gridSize;
+				firstTopPoint += _gridSize;
 				
 				if (y > 1)
 					lastLeftPoint += Math.round((lastSizeX - currentRockSizeX)/2);
@@ -119,7 +132,7 @@ class PlayingScene extends Sprite
 
 				for ( x in 0...currentRockSizeX)
 				{
-					if (y*gridSize + lastLeftPoint + x >= y*gridSize)
+					if (y*_gridSize + lastLeftPoint + x >= y*_gridSize)
 					{
 						var previousTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x - 1];
 						var currentTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x];
@@ -133,7 +146,7 @@ class PlayingScene extends Sprite
 							_tileMap.tile[firstTopPoint + lastLeftPoint + x] = new Tiles(kind);
 					}
 
-					if (gridSize - lastLeftPoint <= x )
+					if (_gridSize - lastLeftPoint <= x )
 						break;
 				}
 
@@ -144,10 +157,8 @@ class PlayingScene extends Sprite
 		}
 	}
 
-	private function generateLiquids(size:Int, liquid:String, type:Int)
+	private function generateLiquids(liquid:String, type:Int)
 	{
-		var gridSize = size;
-
 		if (type == 1) // generate river. Right now i made line river across all map, in future i'll do random river with angle;
 		{
 			//in future can use % of all ground if we want to generate climate, so we can control how many water in this level
@@ -162,9 +173,9 @@ class PlayingScene extends Sprite
 
 			// in future i can draw beach zone on left and right side of river;
 
-			var lastLeftPoint:Int = Math.floor(Math.random()*(gridSize - riverSize + 1));
+			var lastLeftPoint:Int = Math.floor(Math.random()*(_gridSize - riverSize + 1));
 
-			for ( y in 0...gridSize)
+			for ( y in 0..._gridSize)
 			{
 				var riverOffset:Int = Math.floor(Math.random()*3); // 0 - left, 1 - center, 2 - right
 				
@@ -185,10 +196,10 @@ class PlayingScene extends Sprite
 
 				for ( x in 0...riverSize)
 				{
-					_tileMap.tile[y*gridSize + lastLeftPoint + x] = new Tiles(liquid);
+					_tileMap.tile[y*_gridSize + lastLeftPoint + x] = new Tiles(liquid);
 
 					// if my point in the right end of map, we can end river or break some errors;
-					if (gridSize - lastLeftPoint <= x )
+					if (_gridSize - lastLeftPoint <= x )
 						break;
 				}
 			}
@@ -197,7 +208,7 @@ class PlayingScene extends Sprite
 		{
 			var kind:String = "water";
 			var value:Int = 2;
-			generateRocks(size, kind, value);
+			generateRocks(kind, value);
 		}
 	}
 
@@ -211,9 +222,8 @@ class PlayingScene extends Sprite
 
 	}
 
-	private function createTilesheet()
+	private function createLevelGroundTileLayer()
 	{
-		var gridSize = 200;
 		var tileSize = 64;
 
 		var tilesBitmapData:BitmapData = Assets.getBitmapData("assets/images/ground_tile.png");
@@ -225,25 +235,34 @@ class PlayingScene extends Sprite
 		tileset.addRect(new Rectangle(192, 0, 64, 64)); //sand 3
 		tileset.addRect(new Rectangle(256, 0, 64, 64)); //desert 4
 
-		var tilemap = new Tilemap(gridSize*tileSize, gridSize*tileSize, tileset);
+		_groundTileLayer = new Tilemap(_gridSize*tileSize, _gridSize*tileSize, tileset);
 		
 
-		for (row in 0...gridSize)
+		for (row in 0..._gridSize)
 		{
-			for (cell in 0...gridSize)
+			for (cell in 0..._gridSize)
 			{
-				var tile = _tileMap.tile[gridSize*row + cell];
+				var tile = _tileMap.tile[_gridSize*row + cell];
 				var tilePic = tile.groundType;
-				tilemap.addTile (new Tile (tilePic, cell*tileSize, row*tileSize));
+				_groundTileLayer.addTile (new Tile (tilePic, cell*tileSize, row*tileSize));
 			}
 		}
 
-		addChild(tilemap);
+		addChild(_groundTileLayer);
+	}
+
+	private function createCharacterLayer()
+	{
+		var newChar = new SceneCharacterActor("assets/images/char.png");
+		addChild(newChar);
+		_entities.push(newChar);
 	}
 
 	private function onEnterFrame(e:Event)
 	{
 		_userInterface.update();
+		for (entity in _entities)
+			entity.update();
 	}
 
 	public function getUserInterface()
@@ -289,19 +308,19 @@ class PlayingScene extends Sprite
 	{
 		if (e.keyCode == 87) //w
 		{
-			this.y += 10/root.scaleX;
+			this.y += 50/root.scaleX;
 		}
 		else if (e.keyCode == 65) //a
 		{
-			this.x += 10/root.scaleX;
+			this.x += 50/root.scaleX;
 		}
 		else if (e.keyCode == 68) //d
 		{
-			this.x -= 10/root.scaleX;
+			this.x -= 50/root.scaleX;
 		}
 		else if (e.keyCode == 83) //s
 		{
-			this.y -= 10/root.scaleX;
+			this.y -= 50/root.scaleX;
 		}
 
 
