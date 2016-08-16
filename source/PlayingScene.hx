@@ -253,7 +253,7 @@ class PlayingScene extends Sprite
 
 	private function createCharacterLayer()
 	{
-		var newChar = new SceneCharacterActor("assets/images/char.png");
+		var newChar = new SceneCharacterActor(this, "assets/images/char.png");
 		addChild(newChar);
 		_entities.push(newChar);
 	}
@@ -268,6 +268,11 @@ class PlayingScene extends Sprite
 	public function getUserInterface()
 	{
 		return _userInterface;
+	}
+
+	public function getTileMap()
+	{
+		return _tileMap.tile;
 	}
 
 	private function onScroll(e:MouseEvent)

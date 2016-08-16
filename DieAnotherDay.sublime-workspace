@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"gr",
+				"gridSize	Int"
+			],
+			[
+				"tile",
+				"tileGroundSize	Int"
+			],
+			[
+				"_gr",
+				"_groundTileLayer	openfl.display.Tilemap"
+			],
+			[
+				"Po",
+				"Point	openfl.geom"
+			],
+			[
+				"text",
+				"inputText"
+			],
+			[
+				"cells",
+				"cellsArray"
+			],
+			[
+				"cur",
+				"currentId"
+			],
+			[
+				"las",
+				"lastChild"
+			],
+			[
+				"cha",
+				"changeColor"
+			],
+			[
+				"Bit",
+				"Bitmap	openfl.display"
+			],
+			[
+				"add",
+				"addTile(...)	openfl.display.Tile"
+			],
+			[
 				"scle",
 				"scaleY	Float"
 			],
@@ -26,10 +70,6 @@
 			[
 				"K",
 				"KEY_DOWN	String"
-			],
-			[
-				"add",
-				"addEventListener(...)	Void"
 			],
 			[
 				"Ke",
@@ -474,46 +514,6 @@
 			[
 				"B2",
 				"B2World"
-			],
-			[
-				"B2b",
-				"B2BodyDef	box2D.dynamics"
-			],
-			[
-				"Eve",
-				"EventDispatcher	class"
-			],
-			[
-				"body",
-				"bodyDefinition	box2D.dynamics.B2BodyDef"
-			],
-			[
-				"wall",
-				"wallLeft	openfl.display.Sprite"
-			],
-			[
-				"sta",
-				"stageWidth"
-			],
-			[
-				"draw",
-				"drawRect(...)	Void"
-			],
-			[
-				"b2",
-				"b2_staticBody	Int"
-			],
-			[
-				"ba",
-				"ballShape"
-			],
-			[
-				"ADDE",
-				"ADDED_TO_STAGE	String"
-			],
-			[
-				"Debug",
-				"B2DebugDraw	box2D.dynamics"
 			]
 		]
 	},
@@ -547,7 +547,15 @@
 			"file": "source/PlayingScene.hx",
 			"settings":
 			{
-				"buffer_size": 7916,
+				"buffer_size": 8520,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/SceneCharacterActor.hx",
+			"settings":
+			{
+				"buffer_size": 1285,
 				"line_ending": "Windows"
 			}
 		},
@@ -611,21 +619,30 @@
 		"/C/projects/DieAnotherDay",
 		"/C/projects/DieAnotherDay/source",
 		"/C/HaxeToolkit/haxe/lib/openfl",
-		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3"
+		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3",
+		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3/openfl",
+		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3/openfl/display"
 	],
 	"file_history":
 	[
+		"/C/Users/Admin/Desktop/no_title.html",
+		"/C/Users/Admin/Documents/GitHub/shoot-them-all/main.js",
+		"/C/Users/Admin/Documents/GitHub/shoot-them-all/index.html",
+		"/C/Users/Admin/Documents/GitHub/hory-card-v2.0/index.html",
+		"/C/Users/Admin/Documents/GitHub/hory-card-v2.0/battle.js",
+		"/C/projects/openfl-samples-master/demos/HerokuShaders/Source/Main.hx",
+		"/C/projects/openfl-samples-master/demos/NyanCat/Source/Main.hx",
+		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/Tile.hx",
+		"/C/projects/openfl-samples-master/demos/BunnyMark/Source/Main.hx",
+		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/PiratePigGame.hx",
+		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneActor.hx",
 		"/C/projects/DieAnotherDay/project.xml",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/UserInterface.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Scene.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Game.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/ScenePlayerActor.hx",
-		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneActor.hx",
-		"/C/projects/openfl-samples-master/demos/BunnyMark/Source/Main.hx",
 		"/C/projects/openfl-samples-master/demos/TextAlignment/Source/Main.hx",
 		"/C/projects/openfl-samples-master/demos/BunnyMark/Source/Bunny.hx",
-		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/Tile.hx",
-		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/PiratePigGame.hx",
 		"/C/projects/openfl-samples-master/demos/PiratePig/Source/piratepig/PiratePig.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/GameTurnControl.hx",
 		"/C/projects/DieAnotherDay/source/Tile.hx",
@@ -713,16 +730,13 @@
 		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/flixel/FlxSprite.hx",
 		"/C/Users/Admin/Desktop/teaching/HelloWorld/source/MenuState.hx",
 		"/C/HaxeToolkit/haxe/lib/flixel-demos/2,1,0/Tutorials/TurnBasedRPG/source/HUD.hx",
-		"/C/Users/Admin/Documents/GitHub/shoot-them-all/main.js",
-		"/C/Users/Admin/Documents/GitHub/shoot-them-all/index.html",
 		"/C/Users/Admin/Documents/GitHub/shoot-them-all/index.css",
 		"/C/Users/Admin/Desktop/teaching/teaching_2.html",
 		"/C/Users/Admin/AppData/Roaming/Sublime Text 3/Packages/Haxe/Support/Haxe.sublime-settings",
 		"/C/Users/Admin/Desktop/teaching/teaching_haxe/main.js",
 		"/C/Users/Admin/Desktop/arpg/index.js",
 		"/C/Users/Admin/Desktop/arpg/common/tool.js",
-		"/C/Users/Admin/Documents/GitHub/hory-card-v2.0/if.css",
-		"/C/Users/Admin/Documents/GitHub/hory-card-v2.0/index.html"
+		"/C/Users/Admin/Documents/GitHub/hory-card-v2.0/if.css"
 	],
 	"find":
 	{
@@ -740,6 +754,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"gridSize",
 			"Tile",
 			");\n",
 			"reset",
@@ -780,6 +795,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"_gridSize",
 			"Tiles",
 			"world_scale",
 			"w",
@@ -797,7 +813,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -827,7 +843,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -853,7 +869,7 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 864.0,
+						"translation.y": 118.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -882,10 +898,10 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -894,15 +910,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7916,
+						"buffer_size": 8520,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7272,
-								7272
+								7601,
+								7601
 							]
 						],
 						"settings":
@@ -911,7 +927,7 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4338.0,
+						"translation.y": 4673.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -919,6 +935,35 @@
 				},
 				{
 					"buffer": 4,
+					"file": "source/SceneCharacterActor.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1280,
+								1280
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "source/TileMap.hx",
 					"semi_transient": false,
 					"settings":
@@ -947,7 +992,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "source/WelcomeScene.hx",
 					"semi_transient": false,
 					"settings":
@@ -959,8 +1004,8 @@
 						"selection":
 						[
 							[
-								2120,
-								2120
+								1547,
+								1547
 							]
 						],
 						"settings":
@@ -969,14 +1014,14 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 820.0,
+						"translation.y": 442.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "source/Tiles.hx",
 					"semi_transient": false,
 					"settings":
@@ -999,10 +1044,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
