@@ -1,5 +1,7 @@
 package;
 
+import openfl.geom.Point;
+
 class Tiles
 {
 	public var groundType:Int;
@@ -8,7 +10,9 @@ class Tiles
 	public var coverType:Int;
 	public var effect:Int;
 
-	public function new(type)
+	private var _gridPosition:Point;
+
+	public function new(type:String, position:Point)
 	{
 		if (type == "earth")
 			createEarthTile();
@@ -20,6 +24,8 @@ class Tiles
 		{
 
 		}
+
+		_gridPosition = position;
 
 	}
 
@@ -48,5 +54,10 @@ class Tiles
 		blockHp = -1;
 		coverType = 1;
 		effect = 0;
+	}
+
+	public function getGridPosition():Point
+	{
+		return _gridPosition;
 	}
 }

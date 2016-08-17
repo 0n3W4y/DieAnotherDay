@@ -12,6 +12,7 @@ import openfl.geom.Rectangle;
 import openfl.events.MouseEvent;
 import openfl.events.Event;
 import flash.events.KeyboardEvent;
+import openfl.geom.Point;
 
 
 import Math;
@@ -143,7 +144,10 @@ class PlayingScene extends Sprite
 
 						}
 						else
-							_tileMap.tile[firstTopPoint + lastLeftPoint + x] = new Tiles(kind);
+						{
+							var gridPosition = new Point(x, y);
+							_tileMap.tile[firstTopPoint + lastLeftPoint + x] = new Tiles(kind, gridPosition);
+						}
 					}
 
 					if (_gridSize - lastLeftPoint <= x )
@@ -196,7 +200,8 @@ class PlayingScene extends Sprite
 
 				for ( x in 0...riverSize)
 				{
-					_tileMap.tile[y*_gridSize + lastLeftPoint + x] = new Tiles(liquid);
+					var gridPosition = new Point(x, y);
+					_tileMap.tile[y*_gridSize + lastLeftPoint + x] = new Tiles(liquid, gridPosition);
 
 					// if my point in the right end of map, we can end river or break some errors;
 					if (_gridSize - lastLeftPoint <= x )
@@ -215,9 +220,14 @@ class PlayingScene extends Sprite
 	private function fillFloor(ground:String)
 	{
 
-		for (i in 0..._tileMap.tile.length)
+		for (y in 0..._gridSize)
 		{
-			_tileMap.tile[i] = new Tiles(ground);
+			for (x in 0..._gridSize)
+			{
+				var gridPosition = new Point(x, y);
+				_tileMap.tile[y*_gridSize + x] = new Tiles(ground, gridPosition);
+			}
+			
 		}
 
 	}
@@ -254,7 +264,7 @@ class PlayingScene extends Sprite
 	private function createCharacterLayer()
 	{
 		var newChar = new SceneCharacterActor(this, "assets/images/char.png");
-		addChild(newChar);
+		//addChild(newChar);
 		_entities.push(newChar);
 	}
 
