@@ -275,14 +275,19 @@ class PlayingScene extends Sprite
 			entity.update();
 	}
 
-	public function getUserInterface()
+	public function getUserInterface():Sprite
 	{
 		return _userInterface;
 	}
 
-	public function getTileMap()
+	public function getTileMap():Array<Tiles>
 	{
 		return _tileMap.tile;
+	}
+
+	public function getGridSize():Int
+	{
+		return _gridSize;
 	}
 
 	private function onScroll(e:MouseEvent)

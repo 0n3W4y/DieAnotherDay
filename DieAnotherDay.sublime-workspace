@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"_is",
+				"_isPathComplete	var"
+			],
+			[
+				"cure",
+				"currentPositionY"
+			],
+			[
+				"get",
+				"getGridSize"
+			],
+			[
+				"_p",
+				"_pathToDistenation	var"
+			],
+			[
+				"curre",
+				"currentPositionX	var"
+			],
+			[
+				"current",
+				"currentPositionX	var"
+			],
+			[
+				"Destina",
+				"destinationTile"
+			],
+			[
+				"desti",
+				"destinationTilePositionY"
+			],
+			[
+				"des",
+				"destinationTilePositionX	var"
+			],
+			[
+				"destina",
+				"destinationTilePosition	var"
+			],
+			[
+				"typedef",
+				"Typedef	haxe.rtti.CType"
+			],
+			[
 				"Ve",
 				"Vector<T>	haxe.ds"
 			],
@@ -102,10 +146,6 @@
 			[
 				"gro",
 				"groundType	Int"
-			],
-			[
-				"cure",
-				"currentRockSizeX"
 			],
 			[
 				"last",
@@ -230,10 +270,6 @@
 			[
 				"B2B",
 				"B2BodyDef	box2D.dynamics"
-			],
-			[
-				"get",
-				"getFixtureList(...)	box2D.dynamics.B2Fixture"
 			],
 			[
 				"turn",
@@ -478,42 +514,6 @@
 			[
 				"b2Body",
 				"B2BodyDef	box2D.dynamics"
-			],
-			[
-				"Array",
-				"Array<T>	class"
-			],
-			[
-				"pegBounds",
-				"pegBoundsX	Int"
-			],
-			[
-				"u",
-				"updateNow"
-			],
-			[
-				"gp",
-				"graphics	openfl.display.Graphics"
-			],
-			[
-				"w",
-				"world_sprite	flash.display.Sprite"
-			],
-			[
-				"Pla",
-				"PlayerActor	class"
-			],
-			[
-				"setL",
-				"setLinearVelocity(...)	Void"
-			],
-			[
-				"a",
-				"addChild(...)	openfl.display.DisplayObject"
-			],
-			[
-				"wo",
-				"world"
 			]
 		]
 	},
@@ -547,7 +547,7 @@
 			"file": "source/PlayingScene.hx",
 			"settings":
 			{
-				"buffer_size": 8776,
+				"buffer_size": 8858,
 				"line_ending": "Windows"
 			}
 		},
@@ -555,7 +555,7 @@
 			"file": "source/SceneCharacterActor.hx",
 			"settings":
 			{
-				"buffer_size": 2238,
+				"buffer_size": 3704,
 				"line_ending": "Windows"
 			}
 		},
@@ -564,14 +564,6 @@
 			"settings":
 			{
 				"buffer_size": 248,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "source/WelcomeScene.hx",
-			"settings":
-			{
-				"buffer_size": 2416,
 				"line_ending": "Windows"
 			}
 		},
@@ -625,6 +617,7 @@
 	],
 	"file_history":
 	[
+		"/C/projects/DieAnotherDay/source/WelcomeScene.hx",
 		"/C/Users/Admin/Desktop/no_title.html",
 		"/C/Users/Admin/Documents/GitHub/shoot-them-all/main.js",
 		"/C/Users/Admin/Documents/GitHub/shoot-them-all/index.html",
@@ -843,7 +836,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -872,7 +865,7 @@
 						"translation.y": 118.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -901,7 +894,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -910,15 +903,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8776,
+						"buffer_size": 8858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4426,
-								4426
+								5917,
+								5917
 							]
 						],
 						"settings":
@@ -927,7 +920,7 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
+						"translation.y": 3211.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -939,15 +932,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2238,
+						"buffer_size": 3704,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1844,
-								1844
+								1582,
+								1582
 							]
 						],
 						"settings":
@@ -956,7 +949,7 @@
 							"syntax": "Packages/Haxe/Haxe.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 918.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -975,8 +968,8 @@
 						"selection":
 						[
 							[
-								246,
-								246
+								135,
+								135
 							]
 						],
 						"settings":
@@ -988,40 +981,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "source/WelcomeScene.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1547,
-								1547
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "source/Tiles.hx",
 					"semi_transient": false,
 					"settings":
@@ -1033,8 +997,8 @@
 						"selection":
 						[
 							[
-								960,
-								960
+								267,
+								267
 							]
 						],
 						"settings":
@@ -1044,10 +1008,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
