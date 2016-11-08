@@ -4,80 +4,20 @@
 		"selected_items":
 		[
 			[
-				"_is",
-				"_isPathComplete	var"
-			],
-			[
-				"cure",
-				"currentPositionY"
-			],
-			[
-				"get",
-				"getGridSize"
-			],
-			[
-				"_p",
-				"_pathToDistenation	var"
-			],
-			[
-				"curre",
-				"currentPositionX	var"
-			],
-			[
-				"current",
-				"currentPositionX	var"
-			],
-			[
-				"Destina",
-				"destinationTile"
-			],
-			[
-				"desti",
-				"destinationTilePositionY"
-			],
-			[
-				"des",
-				"destinationTilePositionX	var"
-			],
-			[
-				"destina",
-				"destinationTilePosition	var"
-			],
-			[
-				"typedef",
-				"Typedef	haxe.rtti.CType"
-			],
-			[
-				"Ve",
-				"Vector<T>	haxe.ds"
-			],
-			[
-				"Float",
-				"Float	class"
-			],
-			[
-				"Poin",
-				"Point	openfl.geom"
-			],
-			[
-				"_g",
-				"_gridSize	Int"
-			],
-			[
 				"gr",
-				"gridSize	Int"
+				"gridSize\tInt"
 			],
 			[
 				"tile",
-				"tileGroundSize	Int"
+				"tileGroundSize\tInt"
 			],
 			[
 				"_gr",
-				"_groundTileLayer	openfl.display.Tilemap"
+				"_groundTileLayer\topenfl.display.Tilemap"
 			],
 			[
 				"Po",
-				"Point	openfl.geom"
+				"Point\topenfl.geom"
 			],
 			[
 				"text",
@@ -101,43 +41,43 @@
 			],
 			[
 				"Bit",
-				"Bitmap	openfl.display"
+				"Bitmap\topenfl.display"
 			],
 			[
 				"add",
-				"addTile(...)	openfl.display.Tile"
+				"addTile(...)\topenfl.display.Tile"
 			],
 			[
 				"scle",
-				"scaleY	Float"
+				"scaleY\tFloat"
 			],
 			[
 				"Lib",
-				"Lib	openfl"
+				"Lib\topenfl"
 			],
 			[
 				"TextFor",
-				"TextFormatAlign	flash.text"
+				"TextFormatAlign\tflash.text"
 			],
 			[
 				"TextField",
-				"TextField	openfl.text"
+				"TextField\topenfl.text"
 			],
 			[
 				"onKe",
-				"onKeyDown(...)	Void"
+				"onKeyDown(...)\tVoid"
 			],
 			[
 				"K",
-				"KEY_DOWN	String"
+				"KEY_DOWN\tString"
 			],
 			[
 				"Ke",
-				"KeyboardEvent	flash.events"
+				"KeyboardEvent\tflash.events"
 			],
 			[
 				"Key",
-				"KeyboardEvent	openfl.events"
+				"KeyboardEvent\topenfl.events"
 			],
 			[
 				"ground",
@@ -145,7 +85,11 @@
 			],
 			[
 				"gro",
-				"groundType	Int"
+				"groundType\tInt"
+			],
+			[
+				"cure",
+				"currentRockSizeX"
 			],
 			[
 				"last",
@@ -153,43 +97,43 @@
 			],
 			[
 				"rock",
-				"rocksMinSize	var"
+				"rocksMinSize\tvar"
 			],
 			[
 				"ro",
-				"rocksMaxSize	var"
+				"rocksMaxSize\tvar"
 			],
 			[
 				"MouseEv",
-				"MouseEvent	openfl.events"
+				"MouseEvent\topenfl.events"
 			],
 			[
 				"event",
-				"Event	openfl.events"
+				"Event\topenfl.events"
 			],
 			[
 				"Mou",
-				"MouseEvent	openfl.events"
+				"MouseEvent\topenfl.events"
 			],
 			[
 				"Event",
-				"Event	openfl.events"
+				"Event\topenfl.events"
 			],
 			[
 				"tiles",
-				"tilesBitmapDataRectangles	Array<openfl.geom.Rectangle>"
+				"tilesBitmapDataRectangles\tArray<openfl.geom.Rectangle>"
 			],
 			[
 				"Rect",
-				"Rectangle	openfl.geom"
+				"Rectangle\topenfl.geom"
 			],
 			[
 				"Tile",
-				"Tile	openfl.display"
+				"Tile\topenfl.display"
 			],
 			[
 				"rocks",
-				"rocksMinSize	Int"
+				"rocksMinSize\tInt"
 			],
 			[
 				"_",
@@ -197,15 +141,15 @@
 			],
 			[
 				"genertae",
-				"generateWater(...)	Void"
+				"generateWater(...)\tVoid"
 			],
 			[
 				"create",
-				"createWaterTile(  )	Void"
+				"createWaterTile(  )\tVoid"
 			],
 			[
 				"maxNub",
-				"maxNumberOfWater	var"
+				"maxNumberOfWater\tvar"
 			],
 			[
 				"Rock",
@@ -213,19 +157,19 @@
 			],
 			[
 				"TextFo",
-				"TextFormat	openfl.text"
+				"TextFormat\topenfl.text"
 			],
 			[
 				"dra",
-				"drawRoundRect(...)	Void"
+				"drawRoundRect(...)\tVoid"
 			],
 			[
 				"Mouse",
-				"MouseEvent	openfl.events"
+				"MouseEvent\topenfl.events"
 			],
 			[
 				"startGameBut",
-				"startGameButtonText	openfl.text.TextField"
+				"startGameButtonText\topenfl.text.TextField"
 			],
 			[
 				"start",
@@ -237,7 +181,7 @@
 			],
 			[
 				"E",
-				"Event	class"
+				"Event\tclass"
 			],
 			[
 				"weapo",
@@ -245,91 +189,95 @@
 			],
 			[
 				"remov",
-				"removeChild(...)	openfl.display.DisplayObject"
+				"removeChild(...)\topenfl.display.DisplayObject"
 			],
 			[
 				"rem",
-				"removeWeapon(  )	Unknown<9>"
+				"removeWeapon(  )\tUnknown<9>"
 			],
 			[
 				"Get",
-				"getSprite(  )	Unknown<2>"
+				"getSprite(  )\tUnknown<2>"
 			],
 			[
 				"M",
-				"MOUSE_MOVE	String"
+				"MOUSE_MOVE\tString"
 			],
 			[
 				"mouse",
-				"MouseEvent	flash.events"
+				"MouseEvent\tflash.events"
 			],
 			[
 				"set",
-				"setAsBox( hx : Float , hy : Float )	Void"
+				"setAsBox( hx : Float , hy : Float )\tVoid"
 			],
 			[
 				"B2B",
-				"B2BodyDef	box2D.dynamics"
+				"B2BodyDef\tbox2D.dynamics"
+			],
+			[
+				"get",
+				"getFixtureList(...)\tbox2D.dynamics.B2Fixture"
 			],
 			[
 				"turn",
-				"myGameTurnControl	GameTurnControl"
+				"myGameTurnControl\tGameTurnControl"
 			],
 			[
 				"_all",
-				"_allPlayerOnScene	Array<Dynamic>"
+				"_allPlayerOnScene\tArray<Dynamic>"
 			],
 			[
 				"Scne",
-				"ScenePlayerActor	class"
+				"ScenePlayerActor\tclass"
 			],
 			[
 				"stage",
-				"stageHeight	Int"
+				"stageHeight\tInt"
 			],
 			[
 				"tage",
-				"stageWidth	Int"
+				"stageWidth\tInt"
 			],
 			[
 				"stag",
-				"stageWidth	Int"
+				"stageWidth\tInt"
 			],
 			[
 				"rec",
-				"scrollRect	openfl.geom.Rectangle"
+				"scrollRect\topenfl.geom.Rectangle"
 			],
 			[
 				"Timer",
-				"Timer	flash.utils"
+				"Timer\tflash.utils"
 			],
 			[
 				"textF",
-				"TextFieldType	flash.text"
+				"TextFieldType\tflash.text"
 			],
 			[
 				"Scene",
-				"ScenePlayerActor	class"
+				"ScenePlayerActor\tclass"
 			],
 			[
 				"max",
-				"maxSceneHeight	Int"
+				"maxSceneHeight\tInt"
 			],
 			[
 				"sc",
-				"scaleX	Float"
+				"scaleX\tFloat"
 			],
 			[
 				"maxWid",
-				"maxWidthPerPolygon	Float"
+				"maxWidthPerPolygon\tFloat"
 			],
 			[
 				"maxWi",
-				"maxWidthPerPolygon	Float"
+				"maxWidthPerPolygon\tFloat"
 			],
 			[
 				"coord",
-				"coordsArray	Array<Dynamic>"
+				"coordsArray\tArray<Dynamic>"
 			],
 			[
 				"cre",
@@ -345,7 +293,7 @@
 			],
 			[
 				"right",
-				"rightVertexY	var"
+				"rightVertexY\tvar"
 			],
 			[
 				"nextR",
@@ -357,31 +305,31 @@
 			],
 			[
 				"nextRigh",
-				"nextRightVertexY	var"
+				"nextRightVertexY\tvar"
 			],
 			[
 				"next",
-				"nextRightVertexX	var"
+				"nextRightVertexX\tvar"
 			],
 			[
 				"generate",
-				"generatePolygons	function"
+				"generatePolygons\tfunction"
 			],
 			[
 				"B2Fixture",
-				"B2FixtureDef	box2D.dynamics"
+				"B2FixtureDef\tbox2D.dynamics"
 			],
 			[
 				"update",
-				"updateSprite(  )	Void"
+				"updateSprite(  )\tVoid"
 			],
 			[
 				"worldS",
-				"worldScale	Int"
+				"worldScale\tInt"
 			],
 			[
 				"_scne",
-				"_scenesToStop	var"
+				"_scenesToStop\tvar"
 			],
 			[
 				"_sce",
@@ -389,39 +337,39 @@
 			],
 			[
 				"_scenes",
-				"_scenesToStop	var"
+				"_scenesToStop\tvar"
 			],
 			[
 				"Display",
-				"DisplayObject	flash.display"
+				"DisplayObject\tflash.display"
 			],
 			[
 				"L",
-				"Lib	flash"
+				"Lib\tflash"
 			],
 			[
 				"B2Body",
-				"B2BodyDef	box2D.dynamics"
+				"B2BodyDef\tbox2D.dynamics"
 			],
 			[
 				"world",
-				"worldScale	Int"
+				"worldScale\tInt"
 			],
 			[
 				"worl",
-				"worldScale	Int"
+				"worldScale\tInt"
 			],
 			[
 				"_stage",
-				"_stageHeight	Int"
+				"_stageHeight\tInt"
 			],
 			[
 				"Even",
-				"EventDispatcher	flash.events"
+				"EventDispatcher\tflash.events"
 			],
 			[
 				"remove",
-				"removeEventListener(...)	Void"
+				"removeEventListener(...)\tVoid"
 			],
 			[
 				"sha",
@@ -429,19 +377,19 @@
 			],
 			[
 				"se",
-				"setAsBox( hx : Float , hy : Float )	Void"
+				"setAsBox( hx : Float , hy : Float )\tVoid"
 			],
 			[
 				"B2sha",
-				"B2PolygonShape	box2D.collision.shapes"
+				"B2PolygonShape\tbox2D.collision.shapes"
 			],
 			[
 				"b2S",
-				"B2Shape	box2D.collision.shapes"
+				"B2Shape\tbox2D.collision.shapes"
 			],
 			[
 				"Dis",
-				"DisplayObjectContainer	flash.display"
+				"DisplayObjectContainer\tflash.display"
 			],
 			[
 				"new",
@@ -449,15 +397,15 @@
 			],
 			[
 				"linVel",
-				"linVelocityY	Float"
+				"linVelocityY\tFloat"
 			],
 			[
 				"world_s",
-				"world_scale	Float"
+				"world_scale\tFloat"
 			],
 			[
 				"world_",
-				"world_scale	Float"
+				"world_scale\tFloat"
 			],
 			[
 				"LAU",
@@ -465,7 +413,7 @@
 			],
 			[
 				"Add",
-				"addEventListener(...)	Void"
+				"addEventListener(...)\tVoid"
 			],
 			[
 				"Player",
@@ -477,19 +425,19 @@
 			],
 			[
 				"in",
-				"instance(...)	instance.S"
+				"instance(...)\tinstance.S"
 			],
 			[
 				"B2Contact",
-				"B2Contact	box2D.dynamics.contacts"
+				"B2Contact\tbox2D.dynamics.contacts"
 			],
 			[
 				"setC",
-				"setContactListener(...)	Void"
+				"setContactListener(...)\tVoid"
 			],
 			[
 				"B2Contac",
-				"B2ContactListener	box2D.dynamics"
+				"B2ContactListener\tbox2D.dynamics"
 			],
 			[
 				"lef",
@@ -497,11 +445,11 @@
 			],
 			[
 				"line",
-				"lineTo( x : Float , y : Float )	Void"
+				"lineTo( x : Float , y : Float )\tVoid"
 			],
 			[
 				"B2Fixt",
-				"B2FixtureDef	box2D.dynamics"
+				"B2FixtureDef\tbox2D.dynamics"
 			],
 			[
 				"array",
@@ -509,11 +457,63 @@
 			],
 			[
 				"B2Fix",
-				"B2FixtureDef	box2D.dynamics"
+				"B2FixtureDef\tbox2D.dynamics"
 			],
 			[
 				"b2Body",
-				"B2BodyDef	box2D.dynamics"
+				"B2BodyDef\tbox2D.dynamics"
+			],
+			[
+				"Array",
+				"Array<T>\tclass"
+			],
+			[
+				"pegBounds",
+				"pegBoundsX\tInt"
+			],
+			[
+				"u",
+				"updateNow"
+			],
+			[
+				"gp",
+				"graphics\topenfl.display.Graphics"
+			],
+			[
+				"w",
+				"world_sprite\tflash.display.Sprite"
+			],
+			[
+				"Pla",
+				"PlayerActor\tclass"
+			],
+			[
+				"setL",
+				"setLinearVelocity(...)\tVoid"
+			],
+			[
+				"a",
+				"addChild(...)\topenfl.display.DisplayObject"
+			],
+			[
+				"wo",
+				"world"
+			],
+			[
+				"Sp",
+				"Sprite\tflash.display"
+			],
+			[
+				"Disp",
+				"DisplayObject\tflash.display"
+			],
+			[
+				"P",
+				"PHYSICS_SCALE"
+			],
+			[
+				"B2",
+				"B2World"
 			]
 		]
 	},
@@ -548,6 +548,7 @@
 			"settings":
 			{
 				"buffer_size": 8858,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -556,6 +557,7 @@
 			"settings":
 			{
 				"buffer_size": 3704,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -564,6 +566,14 @@
 			"settings":
 			{
 				"buffer_size": 248,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/WelcomeScene.hx",
+			"settings":
+			{
+				"buffer_size": 2416,
 				"line_ending": "Windows"
 			}
 		},
@@ -610,14 +620,14 @@
 	[
 		"/C/projects/DieAnotherDay",
 		"/C/projects/DieAnotherDay/source",
-		"/C/HaxeToolkit/haxe/lib/openfl",
-		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3",
-		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3/openfl",
-		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3/openfl/display"
+		"/C/HaxeToolkit/haxe/lib/openfl"
 	],
 	"file_history":
 	[
-		"/C/projects/DieAnotherDay/source/WelcomeScene.hx",
+		"/C/projects/pathfinder-master/lib/pathfinder/Coordinate.hx",
+		"/C/projects/haxe-astar-master/haxe-astar/src/Main.hx",
+		"/C/projects/haxe-astar-master/haxe-astar/src/statm/explore/haxeAStar/AStar.hx",
+		"/C/projects/haxe-astar-master/README.md",
 		"/C/Users/Admin/Desktop/no_title.html",
 		"/C/Users/Admin/Documents/GitHub/shoot-them-all/main.js",
 		"/C/Users/Admin/Documents/GitHub/shoot-them-all/index.html",
@@ -836,7 +846,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -859,7 +869,8 @@
 						"settings":
 						{
 							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 118.0,
@@ -910,20 +921,21 @@
 						"selection":
 						[
 							[
-								5917,
-								5917
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3211.0,
+						"translation.y": 4673.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -939,17 +951,18 @@
 						"selection":
 						[
 							[
-								1582,
-								1582
+								1513,
+								1513
 							]
 						],
 						"settings":
 						{
 							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 585.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -968,8 +981,8 @@
 						"selection":
 						[
 							[
-								135,
-								135
+								246,
+								246
 							]
 						],
 						"settings":
@@ -981,11 +994,40 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
+					"file": "source/WelcomeScene.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1547,
+								1547
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 442.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "source/Tiles.hx",
 					"semi_transient": false,
 					"settings":
@@ -997,8 +1039,8 @@
 						"selection":
 						[
 							[
-								267,
-								267
+								21,
+								21
 							]
 						],
 						"settings":
@@ -1008,10 +1050,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

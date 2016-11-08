@@ -117,7 +117,7 @@ class PlayingScene extends Sprite
 			for (y in 1...currentRockSizeY+1)
 			{
 				var currentRockSizeX = Math.floor(Math.random()*(currentRockMaxSize - currentRockMinSize + 1) + currentRockMinSize);
-				var rockOffset:Int = Math.floor(Math.random()*3); // 0 - left, 1 - center, 2 - right
+				var rockOffset:Int = Math.floor(Math.random()*3); // 0 - left, 1 - center, 2 - right;
 				firstTopPoint += _gridSize;
 				
 				if (y > 1)
