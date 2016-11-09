@@ -98,7 +98,7 @@ class PlayingScene extends Sprite
 	private function generateRocks(kind:String, value:Int)
 	{
 		//here we can control how many rocks in our scene, and how it big, right now i made rocks by default options;
-		var rocksMaxSize:Int = 40;
+		var rocksMaxSize:Int = 35;
 		var rocksMinSize:Int = 25;
 
 		if (_gridSize/value <= rocksMaxSize)
@@ -107,8 +107,8 @@ class PlayingScene extends Sprite
 		for (i in 0...value)
 		{
 			var currentRockSizeY:Int = Math.floor(Math.random()*(rocksMaxSize - rocksMinSize + 1) + rocksMinSize);
-			var lastLeftPoint:Int = Math.floor(Math.random()*(_gridSize - rocksMinSize + 1));
-			var firstTopPoint:Int = 200 * Math.floor(Math.random()*(_gridSize - rocksMaxSize + 1));
+			var leftPoint:Int = Math.floor(Math.random()*(_gridSize - rocksMinSize + 1));
+			var topPoint:Int = _gridSize * Math.floor(Math.random()*(_gridSize - rocksMaxSize + 1));
 
 			var currentRockMaxSize:Int = rocksMaxSize;
 			var currentRockMinSize:Int = rocksMinSize;
@@ -118,26 +118,25 @@ class PlayingScene extends Sprite
 			{
 				var currentRockSizeX = Math.floor(Math.random()*(currentRockMaxSize - currentRockMinSize + 1) + currentRockMinSize);
 				var rockOffset:Int = Math.floor(Math.random()*3); // 0 - left, 1 - center, 2 - right;
-				firstTopPoint += _gridSize;
 				
-				if (y > 1)
-					lastLeftPoint += Math.round((lastSizeX - currentRockSizeX)/2);
 
 				if (y == 1)
 					rockOffset = 1;
+				else
+					topPoint += _gridSize;
 
 				if (rockOffset == 0)
-					lastLeftPoint -= 1;
+					leftPoint -= 1;
 				else if (rockOffset == 2)
-					lastLeftPoint += 1;
+					leftPoint += 1;
 
 				for ( x in 0...currentRockSizeX)
 				{
-					if (y*_gridSize + lastLeftPoint + x >= y*_gridSize)
+					if (y*_gridSize + leftPoint + x >= y*_gridSize)
 					{
-						var previousTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x - 1];
-						var currentTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x];
-						var nextTile = _tileMap.tile[firstTopPoint + lastLeftPoint + x + 1];
+						var previousTile = _tileMap.tile[topPoint + leftPoint + x - 1];
+						var currentTile = _tileMap.tile[topPoint + leftPoint + x];
+						var nextTile = _tileMap.tile[topPoint + leftPoint + x + 1];
 
 						if ((previousTile.groundType == 2 || previousTile.groundType == 0) && currentTile.groundType == 0 && nextTile.groundType == 1 || previousTile.groundType == 1 && currentTile.groundType == 0 && nextTile.groundType == 0 || currentTile.groundType == 1)
 						{
@@ -146,11 +145,11 @@ class PlayingScene extends Sprite
 						else
 						{
 							var gridPosition = new Point(x, y);
-							_tileMap.tile[firstTopPoint + lastLeftPoint + x] = new Tiles(kind, gridPosition);
+							_tileMap.tile[topPoint + leftPoint + x] = new Tiles(kind, gridPosition);
 						}
 					}
 
-					if (_gridSize - lastLeftPoint <= x )
+					if (_gridSize - leftPoint <= x )
 						break;
 				}
 
@@ -280,7 +279,7 @@ class PlayingScene extends Sprite
 		return _userInterface;
 	}
 
-	public function getTileMap():Array<Tiles>
+	public function getTileMap()
 	{
 		return _tileMap.tile;
 	}

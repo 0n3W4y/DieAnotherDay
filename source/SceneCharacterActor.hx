@@ -25,28 +25,26 @@ class SceneCharacterActor extends Sprite
 		var image = new Bitmap (Assets.getBitmapData (imagePath));
 		image.smoothing = true;
 		addChild (image);
-		image.x:Int = 0;
-		image.y:Int = 0;
-		image.set_width(64.0);
-		image.set_height(64.0);
+		image.x = 0;
+		image.y = 0;
 		var gridSize = _myScene.getGridSize();
 
 		_position = new Point(image.x, image.y);
-		_tilePosition = new Point(Math.round(image.x/gridSize), MAth.round(image.y/gridSize));
+		_tilePosition = new Point(Math.round(image.x/gridSize), Math.round(image.y/gridSize));
 
 		_speed = 2.0;
 	}
 
 	public function update()
 	{
-		move();
+		//move();
 
 		if (!_isBusy)
 		{
 
 		}
 	}
-
+/*
 	public function createPath(destinationTile:Tiles)
 	{
 		if (_pathToDistenation.length == 0) // 1, пробуем сделать короткий путь до цели.
@@ -57,7 +55,7 @@ class SceneCharacterActor extends Sprite
 			var currentPositionX:Int = Math.round(_position.x/gridSize);
 			var currentPositionY:Int = Math.round(_position.y/gridSize);
 			var currentTile:Tiles = tilemap.tile[currentPositionY*gridSize + currentPositionX];
-			calculatePathToDistenation(currentTile:Tiles, destinationTile:Tiles);
+			calculatePathToDistenation(currentTile, destinationTile);
 		}
 		else //2, если не получилось короткий путь. пытаемся анализировать
 		{
@@ -85,7 +83,7 @@ class SceneCharacterActor extends Sprite
 			var currentPositionX:Int = Math.round(_position.x/gridSize);
 			var currentPositionY:Int = Math.round(_position.y/gridSize);
 			var currentPosition:Array<Int> = [currentPositionX, currentPositionY];
-			var destination = []
+			var destination = [];
 
 		}
 		else
@@ -154,5 +152,5 @@ class SceneCharacterActor extends Sprite
 		}
 
 	}
-
+*/
 }
