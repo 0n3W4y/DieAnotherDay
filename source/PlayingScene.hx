@@ -30,6 +30,7 @@ class PlayingScene extends Sprite
 	private var _groundTileLayer:Tilemap;
 	private var _groundEffectsTileLayer:Tilemap;
 	private var _characterTileLayer:Tilemap;
+	private var _pathfinderMap:PathfinderMap;
 
 	private var _entities = new Array();
 
@@ -47,6 +48,8 @@ class PlayingScene extends Sprite
 		_gridSize = 200;
 		_maxSceneWidth = _gridSize + 50;
 		_maxSceneHeight = _gridSize + 50;
+
+		_pathfinderMap = new PathfinderMap(_gridSize, _gridSize);
 
 		createLevel();
 		addInputs();
@@ -263,7 +266,7 @@ class PlayingScene extends Sprite
 	private function createCharacterLayer()
 	{
 		var newChar = new SceneCharacterActor(this, "assets/images/char.png");
-		//addChild(newChar);
+		addChild(newChar);
 		_entities.push(newChar);
 	}
 
@@ -287,6 +290,11 @@ class PlayingScene extends Sprite
 	public function getGridSize():Int
 	{
 		return _gridSize;
+	}
+
+	public function getPathfinderMap():PathfinderMap
+	{
+		return _pathfinderMap;
 	}
 
 	private function onScroll(e:MouseEvent)
