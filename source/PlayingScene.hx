@@ -54,12 +54,11 @@ class PlayingScene extends Sprite
 		_maxSceneWidth = _gridSize + 50;
 		_maxSceneHeight = _gridSize + 50;
 
-		_pathfinderMap = new PathfinderMap(_gridSize, _gridSize, this);
-		_pathFinder = new Pathfinder(_pathfinderMap);
+		createUserInterface();
 
 		createLevel();
 		addInputs();
-		createUserInterface();
+		
 		addEventListener (Event.ENTER_FRAME, onEnterFrame);
 	}
 
@@ -169,7 +168,7 @@ class PlayingScene extends Sprite
 		}
 	}
 
-	private function generateLiquids(liquid:String, type:Int)
+	private function generateLiquids(liquid:String, type:Int) //have some errors, need to rebuild ;
 	{
 		if (type == 1) // generate river. Right now i made line river across all map, in future i'll do random river with angle;
 		{
@@ -242,16 +241,16 @@ class PlayingScene extends Sprite
 
 	private function createLevelGroundTileLayer()
 	{
-		var tileSize = 64;
+		var tileSize = 32;
 
-		var tilesBitmapData:BitmapData = Assets.getBitmapData("assets/images/ground_tile.png");
+		var tilesBitmapData:BitmapData = Assets.getBitmapData("assets/images/ground_tile_small.png");
 		var tilesBitmapDataRectangles = new Array();
 		var tileset = new Tileset(tilesBitmapData);
-		tileset.addRect(new Rectangle(0, 0, 64, 64)); //grass, earth 0
-		tileset.addRect(new Rectangle(64, 0, 64, 64)); //water 1
-		tileset.addRect(new Rectangle(128, 0, 64, 64)); //rocks 2
-		tileset.addRect(new Rectangle(192, 0, 64, 64)); //sand 3
-		tileset.addRect(new Rectangle(256, 0, 64, 64)); //desert 4
+		tileset.addRect(new Rectangle(32, 0, 32, 32)); //grass, earth 0
+		tileset.addRect(new Rectangle(0, 0, 32, 32)); //water 1
+		tileset.addRect(new Rectangle(64, 0, 32, 32)); //rocks 2
+		//tileset.addRect(new Rectangle(192, 0, 64, 64)); //sand 3
+		//tileset.addRect(new Rectangle(256, 0, 64, 64)); //desert 4
 
 		_groundTileLayer = new Tilemap(_gridSize*tileSize, _gridSize*tileSize, tileset);
 		

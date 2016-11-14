@@ -32,7 +32,7 @@ class UserInterface extends Sprite
         newTextField.x = 200;
         newTextField.y = 200;
         newTextField.defaultTextFormat = startGameButtonTextFormat;
-        newTextField.text = "Hello, use WASD to move map";
+        newTextField.text = "Hello, use WASD to move";
         newTextField.selectable = false;
         addChild(newTextField);
 

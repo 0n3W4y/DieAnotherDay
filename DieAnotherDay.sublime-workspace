@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Vectr",
+				"Vector<T>\thaxe.ds"
+			],
+			[
+				"Vector",
+				"Vector<T>\thaxe.ds"
+			],
+			[
+				"_path",
+				"_pathfinderMap"
+			],
+			[
+				"Pathfin",
+				"pathfinder\tpackage"
+			],
+			[
 				"_grid",
 				"_gridSize\tvar"
 			],
@@ -498,22 +514,6 @@
 			[
 				"gp",
 				"graphics\topenfl.display.Graphics"
-			],
-			[
-				"w",
-				"world_sprite\tflash.display.Sprite"
-			],
-			[
-				"Pla",
-				"PlayerActor\tclass"
-			],
-			[
-				"setL",
-				"setLinearVelocity(...)\tVoid"
-			],
-			[
-				"a",
-				"addChild(...)\topenfl.display.DisplayObject"
 			]
 		]
 	},
@@ -539,7 +539,8 @@
 			"file": "source/UserInterface.hx",
 			"settings":
 			{
-				"buffer_size": 942,
+				"buffer_size": 938,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -547,7 +548,7 @@
 			"file": "source/PlayingScene.hx",
 			"settings":
 			{
-				"buffer_size": 8897,
+				"buffer_size": 9053,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -556,24 +557,16 @@
 			"file": "source/PathfinderMap.hx",
 			"settings":
 			{
-				"buffer_size": 447,
+				"buffer_size": 600,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "source/pathfinder/Coordinate.hx",
-			"settings":
-			{
-				"buffer_size": 1922,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "source/SceneCharacterActor.hx",
 			"settings":
 			{
-				"buffer_size": 3640,
+				"buffer_size": 1691,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -837,7 +830,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -867,7 +860,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -906,15 +899,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 942,
+						"buffer_size": 938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								489,
-								489
+								774,
+								774
 							]
 						],
 						"settings":
@@ -935,106 +928,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8897,
+						"buffer_size": 9053,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								401,
-								401
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "source/PathfinderMap.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								438,
-								438
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "source/pathfinder/Coordinate.hx",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1922,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1609,
-								1609
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "source/SceneCharacterActor.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3640,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								613,
-								613
+								1083,
+								1083
 							]
 						],
 						"settings":
@@ -1051,7 +953,68 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 4,
+					"file": "source/PathfinderMap.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								567,
+								567
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/SceneCharacterActor.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								772,
+								772
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "source/TileMap.hx",
 					"semi_transient": false,
 					"settings":
@@ -1063,8 +1026,8 @@
 						"selection":
 						[
 							[
-								246,
-								246
+								135,
+								135
 							]
 						],
 						"settings":
@@ -1080,7 +1043,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "source/WelcomeScene.hx",
 					"semi_transient": false,
 					"settings":
@@ -1109,7 +1072,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "source/Tiles.hx",
 					"semi_transient": false,
 					"settings":
@@ -1121,8 +1084,8 @@
 						"selection":
 						[
 							[
-								464,
-								464
+								592,
+								592
 							]
 						],
 						"settings":
@@ -1132,7 +1095,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
