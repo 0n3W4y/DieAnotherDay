@@ -273,6 +273,10 @@ class PlayingScene extends Sprite
 		var newChar = new SceneCharacterActor(this, "assets/images/char.png");
 		addChild(newChar);
 		_entities.push(newChar);
+
+		var secondChar = new SceneCharacterActor(this, "assets/images/char2.png");
+		addChild(secondChar);
+		_entities.push(secondChar);
 	}
 
 	private function onEnterFrame(e:Event)
@@ -287,9 +291,9 @@ class PlayingScene extends Sprite
 		return _userInterface;
 	}
 
-	public function getTileMap():Vector<Tiles>
+	public function getTileMap():TileMap
 	{
-		return _tileMap.tile;
+		return _tileMap;
 	}
 
 	public function getGridSize():Int
@@ -361,6 +365,16 @@ class PlayingScene extends Sprite
 		}
 
 
+	}
+
+	public function isWalkableTile(x:Int, y:Int)
+	{
+		var tile = _tileMap.tile[y*_gridSize + x];
+
+		if (tile.groundType == 0)
+			return true;
+		else
+			return false;
 	}
 
 

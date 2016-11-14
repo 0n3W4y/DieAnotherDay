@@ -21,7 +21,7 @@ class PathfinderMap implements IMap
 
     public function isWalkable( p_x:Int, p_y:Int ):Bool
     {
-       return true;
+       return _char.isTileWalkable(p_x, p_y);
     }
 
 }

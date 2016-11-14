@@ -45,6 +45,8 @@ class SceneCharacterActor extends Sprite
 		_speed = 4.0;
 
 		createPathFinder();
+
+		//isTileWalkable(0,0);
 	}
 
 	public function update()
@@ -105,7 +107,7 @@ class SceneCharacterActor extends Sprite
 			_image.y += _speed*directionY;
 
 			_position = new Point(_image.x, _image.y);
-			_tilePosition = new Point(Math.round(_image.x/16), Math.round(_image.y/16)); //32 - tilesize;
+			_tilePosition = new Point(Math.round(_image.x/64), Math.round(_image.y/64)); //32 - tilesize;
 
 			if (_tilePosition.x == nextPosition.x && _tilePosition.y == nextPosition.y)
 				_path.splice(0, 1);
@@ -129,5 +131,11 @@ class SceneCharacterActor extends Sprite
 		var destinationY:Int = Math.floor(Math.random()*(_gridSize +1));
 
 		createPath(destinationX, destinationY);
+	}
+
+	public function isTileWalkable(x:Int, y:Int):Bool
+	{
+		//return _myScene.isWalkableTile(x, y);
+		return true;
 	}
 }
