@@ -13,6 +13,9 @@ import openfl.events.MouseEvent;
 import openfl.events.Event;
 import flash.events.KeyboardEvent;
 import openfl.geom.Point;
+import haxe.ds.Vector;
+
+import pathfinder.Pathfinder;
 
 
 import Math;
@@ -30,7 +33,9 @@ class PlayingScene extends Sprite
 	private var _groundTileLayer:Tilemap;
 	private var _groundEffectsTileLayer:Tilemap;
 	private var _characterTileLayer:Tilemap;
+
 	private var _pathfinderMap:PathfinderMap;
+	private var _pathFinder:Pathfinder;
 
 	private var _entities = new Array();
 
@@ -49,7 +54,8 @@ class PlayingScene extends Sprite
 		_maxSceneWidth = _gridSize + 50;
 		_maxSceneHeight = _gridSize + 50;
 
-		_pathfinderMap = new PathfinderMap(_gridSize, _gridSize);
+		_pathfinderMap = new PathfinderMap(_gridSize, _gridSize, this);
+		_pathFinder = new Pathfinder(_pathfinderMap);
 
 		createLevel();
 		addInputs();
@@ -282,7 +288,7 @@ class PlayingScene extends Sprite
 		return _userInterface;
 	}
 
-	public function getTileMap()
+	public function getTileMap():Vector<Tiles>
 	{
 		return _tileMap.tile;
 	}
@@ -295,6 +301,11 @@ class PlayingScene extends Sprite
 	public function getPathfinderMap():PathfinderMap
 	{
 		return _pathfinderMap;
+	}
+
+	public function getpathFinder():Pathfinder
+	{
+		return _pathFinder;
 	}
 
 	private function onScroll(e:MouseEvent)
