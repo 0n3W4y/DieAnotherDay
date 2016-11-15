@@ -1,11 +1,14 @@
 package;
 
+import openfl.display.Sprite;
+
 class Game 
 {
 
 	private var _currentScene:Dynamic;
 	private var _mainSprite:Main;
-	private var _allScenes:Array<Dynamic>;
+	private var _allScenes:Array<Sprite>;
+	private var _userInterface:UserInterface;
 
 	public function new(mainSprite)
 	{
@@ -39,14 +42,14 @@ class Game
 			}
 		}
 
-		var welcomeScene = new WelcomeScene(this);
-		_currentScene = welcomeScene;
-		_mainSprite.addChild(welcomeScene);
+		_currentScene = new WelcomeScene(this);
+		_mainSprite.addChild(_currentScene);
 
 	}
 
 	public function toPlayingScene()
 	{
+
 		if (_currentScene != PlayingScene)
 			_mainSprite.removeChild(_currentScene);
 
@@ -61,9 +64,15 @@ class Game
 			}
 		}
 
-		var playingScene = new PlayingScene(this);
-		_currentScene = playingScene;
-		_mainSprite.addChild(playingScene);
+		_currentScene = new PlayingScene(this);
+		_mainSprite.addChild(_currentScene);
+
+		if (_userInterface == null)
+		{
+			_userInterface = new UserInterface(this);
+			_mainSprite.addChild(_userInterface);
+		}
+		
 	}
 
 	public function toOptionScene()
@@ -74,5 +83,10 @@ class Game
 	public function toScene(scene)
 	{
 		
+	}
+
+	public function getUI()
+	{
+		return _userInterface;
 	}
 }

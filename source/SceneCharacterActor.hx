@@ -4,6 +4,7 @@ import openfl.display.Sprite;
 import openfl.Assets;
 import openfl.display.Bitmap;
 import openfl.geom.Point;
+import openfl.events.MouseEvent;
 
 import pathfinder.Pathfinder;
 import pathfinder.Coordinate;
@@ -23,10 +24,14 @@ class SceneCharacterActor extends Sprite
 	private var _isReachDestinationPoint:Bool = true;
 
 	private var _image:Bitmap;
+	private var _charFrame:Bitmap;
 	private var _pathFinderMap:PathfinderMap;
 	private var _pathFinder:Pathfinder;
+	private var _destinationDot:Sprite;
 
 	private var _isBusy:Bool = false;
+	private var _isHaveaFrame:Bool = false;
+
 
 	public function new(scene, imagePath:String)
 	{
@@ -40,13 +45,16 @@ class SceneCharacterActor extends Sprite
 		_gridSize = _myScene.getGridSize();
 
 		_position = new Point(_image.x, _image.y);
-		_tilePosition = new Point(Math.round(_image.x/_gridSize), Math.round(_image.y/_gridSize));
+		_tilePosition = new Point(Math.floor(_image.x/32), Math.floor(_image.y/32));
 
 		_speed = 4.0;
 
 		createPathFinder();
 
+		addEventListener( MouseEvent.CLICK, onClick );
+
 		//isTileWalkable(0,0);
+
 	}
 
 	public function update()
@@ -59,7 +67,22 @@ class SceneCharacterActor extends Sprite
 		if (_isReachDestinationPoint)
 		{
 			generateRnadomPoint();
+			if (_destinationDot != null)
+			{
+				removeChild(_destinationDot);
+			}
 		}
+
+		if (_isHaveaFrame)
+		{
+			updateCharFrame();
+		}
+	}
+
+	private function updateCharFrame()
+	{
+		_charFrame.x = _image.x;
+		_charFrame.y = _image.y;
 	}
 
 	private function createPath(x:Int, y:Int)
@@ -107,7 +130,7 @@ class SceneCharacterActor extends Sprite
 			_image.y += _speed*directionY;
 
 			_position = new Point(_image.x, _image.y);
-			_tilePosition = new Point(Math.round(_image.x/64), Math.round(_image.y/64)); //32 - tilesize;
+			_tilePosition = new Point(Math.floor(_image.x/32), Math.floor(_image.y/32)); //32 - tilesize;
 
 			if (_tilePosition.x == nextPosition.x && _tilePosition.y == nextPosition.y)
 				_path.splice(0, 1);
@@ -130,12 +153,55 @@ class SceneCharacterActor extends Sprite
 		var destinationX:Int = Math.floor(Math.random()*(_gridSize +1));
 		var destinationY:Int = Math.floor(Math.random()*(_gridSize +1));
 
+
+
 		createPath(destinationX, destinationY);
 	}
 
 	public function isTileWalkable(x:Int, y:Int):Bool
 	{
-		//return _myScene.isWalkableTile(x, y);
 		return true;
+	}
+
+	public function onClick(e:MouseEvent)
+	{
+		if (!_isHaveaFrame)
+		{
+			_charFrame = new Bitmap (Assets.getBitmapData ("assets/images/char_frame.png"));
+			addChild (_charFrame);
+			updateCharFrame();
+			_isHaveaFrame = true;
+
+			if (!_isReachDestinationPoint)
+			{
+				var destinationTile = _path[_path.length-1];
+				//var tileSize = _myScene.getTileSize();
+				var tileSize = 32;
+				var dotPositionX = destinationTile.x*tileSize;
+				var dotPositionY = destinationTile.y*tileSize;
+
+				_destinationDot = new Sprite();
+				_destinationDot.graphics.beginFill(0xFF0000);
+				_destinationDot.graphics.drawRect(0,0,10,10);
+				_destinationDot.graphics.endFill();
+
+				_destinationDot.x = dotPositionX + tileSize/2;
+				_destinationDot.y = dotPositionY + tileSize/2;
+
+				addChild(_destinationDot);
+			}
+
+		}
+		else
+		{
+			removeChild(_charFrame);
+			_isHaveaFrame = false;
+			if (_destinationDot != null)
+			{
+				removeChild(_destinationDot);
+			}
+		}
+
+		
 	}
 }

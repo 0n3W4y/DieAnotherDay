@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"Mouse",
+				"MouseEvent\topenfl.events"
+			],
+			[
+				"dotPo",
+				"dotPositionY\tvar"
+			],
+			[
+				"my",
+				"_myScene\tPlayingScene"
+			],
+			[
+				"is",
+				"_isReachDestinationPoint\tBool"
+			],
+			[
+				"tilepO",
+				"tilePosY\tInt"
+			],
+			[
+				"Pat",
+				"pathfinder\tpackage"
+			],
+			[
+				"Pa",
+				"Pathfinder\tpathfinder"
+			],
+			[
 				"Vectr",
 				"Vector<T>\thaxe.ds"
 			],
@@ -198,10 +226,6 @@
 			[
 				"dra",
 				"drawRoundRect(...)\tVoid"
-			],
-			[
-				"Mouse",
-				"MouseEvent\topenfl.events"
 			],
 			[
 				"startGameBut",
@@ -490,48 +514,20 @@
 			[
 				"array",
 				"arrayOfCoordinates"
-			],
-			[
-				"B2Fix",
-				"B2FixtureDef\tbox2D.dynamics"
-			],
-			[
-				"b2Body",
-				"B2BodyDef\tbox2D.dynamics"
-			],
-			[
-				"Array",
-				"Array<T>\tclass"
-			],
-			[
-				"pegBounds",
-				"pegBoundsX\tInt"
-			],
-			[
-				"u",
-				"updateNow"
-			],
-			[
-				"gp",
-				"graphics\topenfl.display.Graphics"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "source/Main.hx",
-			"settings":
-			{
-				"buffer_size": 447,
-				"line_ending": "Unix"
-			}
-		},
-		{
+			"contents": "package;\n\nimport openfl.display.Sprite;\n\nclass Game \n{\n\n\tprivate var _currentScene:Dynamic;\n\tprivate var _mainSprite:Main;\n\tprivate var _allScenes:Array<Sprite>;\n\tprivate var _userInterface:UserInterface;\n\n\tpublic function new(mainSprite)\n\t{\n\t\t_mainSprite = mainSprite;\n\t\tinit();\n\t}\n\n\tpublic function init()\n\t{\n\t\t_allScenes = new Array();\n\t\t//create some starting scenes like options, load, etc;\n\t\t_currentScene  = new WelcomeScene(this);\n\t\t_mainSprite.addChild(_currentScene);\n\t\t_allScenes.push(_currentScene);\n\n\t}\n\n\tpublic function toWelcomeScene()\n\t{\n\t\tif (_currentScene != WelcomeScene)\n\t\t\t_mainSprite.removeChild(_currentScene);\n\n\t\tfor (i in 0..._allScenes.length)\n\t\t{\n\t\t\tvar scene = _allScenes[i];\n\t\t\tif (Std.is(scene, WelcomeScene))\n\t\t\t{\n\t\t\t\t_currentScene = scene;\n\t\t\t\t_mainSprite.addChild(scene);\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\n\n\t\t_currentScene = new WelcomeScene(this);\n\t\t_mainSprite.addChild(_currentScene);\n\n\t}\n\n\tpublic function toPlayingScene()\n\t{\n\n\t\tif (_currentScene != PlayingScene)\n\t\t\t_mainSprite.removeChild(_currentScene);\n\n\t\tfor (i in 0..._allScenes.length)\n\t\t{\n\t\t\tvar scene = _allScenes[i];\n\t\t\tif (Std.is(scene, PlayingScene))\n\t\t\t{\n\t\t\t\t_currentScene = scene;\n\t\t\t\t_mainSprite.addChild(scene);\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\n\n\t\t_currentScene = new PlayingScene(this);\n\t\t_mainSprite.addChild(_currentScene);\n\n\t\tif (_userInterface == null)\n\t\t{\n\t\t\t_userInterface = new UserInterface(this);\n\t\t\t_mainSprite.addChild(_userInterface);\n\t\t}\n\t\t\n\t}\n\n\tpublic function toOptionScene()\n\t{\n\t\t\n\t}\n\n\tpublic function toScene(scene)\n\t{\n\t\t\n\t}\n\n\tpublic function getUI()\n\t{\n\t\treturn _userInterface;\n\t}\n}",
 			"file": "source/Game.hx",
+			"file_size": 1668,
+			"file_write_time": 131236743728560416,
 			"settings":
 			{
-				"buffer_size": 1386,
+				"buffer_size": 1579,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -539,7 +535,7 @@
 			"file": "source/UserInterface.hx",
 			"settings":
 			{
-				"buffer_size": 938,
+				"buffer_size": 879,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -548,8 +544,19 @@
 			"file": "source/PlayingScene.hx",
 			"settings":
 			{
-				"buffer_size": 9053,
+				"buffer_size": 9273,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "package;\n\nimport openfl.display.Bitmap;\nimport openfl.display.BitmapData;\nimport openfl.display.Sprite;\nimport openfl.Assets;\nimport openfl.Lib;\nimport openfl.text.TextField;\nimport openfl.events.MouseEvent;\nimport openfl.text.TextFormat;\nimport openfl.text.TextFormatAlign;\n\n\nclass WelcomeScene extends Sprite\n{\n\n\tprivate var _myGame:Game;\n\tprivate var _startGameButton:Sprite;\n\n\tpublic function new(game)\n\t{\n\t\tsuper();\n\t\t_myGame = game;\n\t\tinit();\n\t}\n\n\tprivate function init()\n\t{\n\t\tcreateBackgroundPic();\n\t\tcreateButtons();\n\t\taddEventListener (MouseEvent.MOUSE_MOVE, onMouseMove);\n\t}\n\n\tprivate function createBackgroundPic()\n\t{\n\t\tvar bitmap = new Bitmap (Assets.getBitmapData (\"assets/images/dadlogo.png\"));\n\t\taddChild (bitmap);\n\n\t\tbitmap.x = (Lib.current.stage.stageWidth - bitmap.width) / 2;\n\t\tbitmap.y = (Lib.current.stage.stageHeight - bitmap.height) / 2;\n\n\t}\n\n\tprivate function createButtons()\n\t{\n\t\t_startGameButton = new Sprite();\n\t\t_startGameButton.graphics.beginFill( 0xFF0000 );\n        _startGameButton.graphics.drawRoundRect( 0, 0, 180, 40, 10, 10 );\n        _startGameButton.graphics.endFill();\n        addChild(_startGameButton);\n\n        var startGameButtonTextFormat:TextFormat = new TextFormat(\"Verdana\", 18, 0xffffff, true);\n\t\tstartGameButtonTextFormat.align = TextFormatAlign.CENTER;\n\n        var startGameButtonText = new TextField();\n        startGameButtonText.width = 180;\n        startGameButtonText.height = 40;\n        startGameButtonText.defaultTextFormat = startGameButtonTextFormat;\n        startGameButtonText.text = \"Start\";\n        startGameButtonText.selectable = false;\n        addChild(startGameButtonText);\n\n        startGameButtonText.addEventListener( MouseEvent.CLICK, onClick );\n\n        startGameButtonText.x = (Lib.current.stage.stageWidth - startGameButtonText.width) / 2 + 400;\n        startGameButtonText.y = (Lib.current.stage.stageHeight - startGameButtonText.height) / 2 + 210;\n\n        _startGameButton.x = (Lib.current.stage.stageWidth - _startGameButton.width) / 2 + 400;\n        _startGameButton.y = (Lib.current.stage.stageHeight - _startGameButton.height) / 2 + 200;\n\t}\n\n\tprivate function onClick( event:MouseEvent )\n    {\n    \t_startGameButton.graphics.clear();\n    \t_startGameButton.graphics.beginFill(0x00aa00);\n    \t//_startGameButton.graphics.drawRoundRect( 0, 0, 180, 40, 10, 10 );\n    \t_startGameButton.graphics.endFill();\n\n        //go to game and start playing Scene;\n        _myGame.toPlayingScene();\n    }\n\n    private function onMouseMove(e:MouseEvent)\n    {\n    \t\n    }\n}",
+			"file": "source/WelcomeScene.hx",
+			"file_size": 2496,
+			"file_write_time": 131157188987217337,
+			"settings":
+			{
+				"buffer_size": 2538,
 				"line_ending": "Windows"
 			}
 		},
@@ -557,7 +564,7 @@
 			"file": "source/PathfinderMap.hx",
 			"settings":
 			{
-				"buffer_size": 600,
+				"buffer_size": 565,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -566,32 +573,8 @@
 			"file": "source/SceneCharacterActor.hx",
 			"settings":
 			{
-				"buffer_size": 1691,
+				"buffer_size": 4780,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "source/TileMap.hx",
-			"settings":
-			{
-				"buffer_size": 248,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "source/WelcomeScene.hx",
-			"settings":
-			{
-				"buffer_size": 2416,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "source/Tiles.hx",
-			"settings":
-			{
-				"buffer_size": 1033,
 				"line_ending": "Windows"
 			}
 		}
@@ -635,6 +618,14 @@
 	],
 	"file_history":
 	[
+		"/C/projects/New_DieAnotherDay/source/Game.hx",
+		"/C/projects/DieAnotherDay/source/Main.hx",
+		"/C/projects/DieAnotherDay/source/TileMap.hx",
+		"/C/projects/DieAnotherDay/source/WelcomeScene.hx",
+		"/C/projects/DieAnotherDay/source/Tiles.hx",
+		"/C/Users/aakorolev/Downloads/pathfinder-master/demo/src/demo/MapData.hx",
+		"/C/Users/aakorolev/Downloads/pathfinder-master/demo/src/Config.hx",
+		"/C/Users/aakorolev/Downloads/pathfinder-master/demo/src/Main.hx",
 		"/C/projects/DieAnotherDay/source/pathfinder/PathfinderMap.hx",
 		"/C/projects/pathfinder-master/lib/pathfinder/Coordinate.hx",
 		"/C/projects/haxe-astar-master/haxe-astar/src/Main.hx",
@@ -668,7 +659,6 @@
 		"/C/projects/DieAnotherDay/source/Platform.hx",
 		"/C/projects/DieAnotherDay/DisplayingABitmap/Source/Main.hx",
 		"/C/projects/DieAnotherDay/DisplayingABitmap/project.xml",
-		"/C/projects/DieAnotherDay/source/Main.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/SceneGroundActor.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/TimeMaster.hx",
 		"/C/Users/Admin/Documents/GitHub/roaches-box2d-haxe/source/Weapon.hx",
@@ -769,6 +759,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"tileSize",
 			"lastLeftPoint",
 			"gridSize",
 			"Tile",
@@ -811,6 +802,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"_tileSize",
 			"firstLeftPoint",
 			"_gridSize",
 			"Tiles",
@@ -830,54 +822,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "source/Main.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								357,
-								357
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "source/Game.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1386,
+						"buffer_size": 1579,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1375,
-								1375
+								1475,
+								1475
 							]
 						],
 						"settings":
@@ -887,27 +849,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 315.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "source/UserInterface.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 938,
+						"buffer_size": 879,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								774,
-								774
+								219,
+								219
 							]
 						],
 						"settings":
@@ -919,24 +881,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "source/PlayingScene.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9053,
+						"buffer_size": 9273,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1083,
-								1083
+								1429,
+								1377
 							]
 						],
 						"settings":
@@ -946,10 +908,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 526.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/WelcomeScene.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2530,
+								2530
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -958,15 +949,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 600,
+						"buffer_size": 565,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								567,
-								567
+								556,
+								556
 							]
 						],
 						"settings":
@@ -980,7 +971,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -989,15 +980,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1691,
+						"buffer_size": 4780,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								772,
-								772
+								4045,
+								4045
 							]
 						],
 						"settings":
@@ -1007,98 +998,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2025.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "source/TileMap.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								135,
-								135
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "source/WelcomeScene.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1547,
-								1547
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 483.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "source/Tiles.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1033,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								592,
-								592
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

@@ -8,14 +8,14 @@ import openfl.Lib;
 
 class UserInterface extends Sprite
 {
-	private var _myScene:PlayingScene;
+	private var _myGame:Game;
 
 
-	public function new(scene)
+	public function new(game)
 	{
 		super();
 
-		_myScene = scene;
+		_myGame = game;
 		init();
 
 	}
@@ -40,8 +40,7 @@ class UserInterface extends Sprite
 
 	public function update()
 	{
-		this.x = -_myScene.x;
-		this.y = -_myScene.y;
+
 	}
 	
 }

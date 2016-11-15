@@ -23,7 +23,7 @@ import Math;
 class PlayingScene extends Sprite
 {	
 	private var _myGame:Game;
-	private var _tileMap:TileMap;
+	public var _tileMap:TileMap;
 	private var _userInterface:UserInterface;
 	private var _gridSize:Int; // want to create always square;
 
@@ -39,6 +39,8 @@ class PlayingScene extends Sprite
 
 	private var _entities = new Array();
 
+	private var _tileSize:Int;
+
 	// 0 - earth, 1 - water, 2 - rocks;
 
 	public function new(game)
@@ -51,10 +53,9 @@ class PlayingScene extends Sprite
 	private function init()
 	{
 		_gridSize = 200;
+		_tileSize = 32;
 		_maxSceneWidth = _gridSize + 50;
 		_maxSceneHeight = _gridSize + 50;
-
-		createUserInterface();
 
 		createLevel();
 		addInputs();
@@ -68,11 +69,6 @@ class PlayingScene extends Sprite
 		Lib.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 	}
 
-	private function createUserInterface()
-	{
-		_userInterface = new UserInterface(this);
-		addChild(_userInterface);
-	}
 
 	private function createLevel()
 	{
@@ -241,8 +237,6 @@ class PlayingScene extends Sprite
 
 	private function createLevelGroundTileLayer()
 	{
-		var tileSize = 32;
-
 		var tilesBitmapData:BitmapData = Assets.getBitmapData("assets/images/ground_tile_small.png");
 		var tilesBitmapDataRectangles = new Array();
 		var tileset = new Tileset(tilesBitmapData);
@@ -252,7 +246,7 @@ class PlayingScene extends Sprite
 		//tileset.addRect(new Rectangle(192, 0, 64, 64)); //sand 3
 		//tileset.addRect(new Rectangle(256, 0, 64, 64)); //desert 4
 
-		_groundTileLayer = new Tilemap(_gridSize*tileSize, _gridSize*tileSize, tileset);
+		_groundTileLayer = new Tilemap(_gridSize*_tileSize, _gridSize*_tileSize, tileset);
 		
 
 		for (row in 0..._gridSize)
@@ -261,7 +255,7 @@ class PlayingScene extends Sprite
 			{
 				var tile = _tileMap.tile[_gridSize*row + cell];
 				var tilePic = tile.groundType;
-				_groundTileLayer.addTile (new Tile (tilePic, cell*tileSize, row*tileSize));
+				_groundTileLayer.addTile (new Tile (tilePic, cell*_tileSize, row*_tileSize));
 			}
 		}
 
@@ -281,7 +275,6 @@ class PlayingScene extends Sprite
 
 	private function onEnterFrame(e:Event)
 	{
-		_userInterface.update();
 		for (entity in _entities)
 			entity.update();
 	}
@@ -309,6 +302,11 @@ class PlayingScene extends Sprite
 	public function getpathFinder():Pathfinder
 	{
 		return _pathFinder;
+	}
+
+	public function getTileSize():Int
+	{
+		return _tileSize;
 	}
 
 	private function onScroll(e:MouseEvent)
