@@ -4,6 +4,310 @@
 		"selected_items":
 		[
 			[
+				"_tilere",
+				"_tilesRenderStepY"
+			],
+			[
+				"_render",
+				"_tilesRenderX\tInt"
+			],
+			[
+				"_ren",
+				"_renderSquareTile\tInt"
+			],
+			[
+				"abs",
+				"absDy\tFloat"
+			],
+			[
+				"_tilesRenderSte",
+				"_tilesRenderStepY"
+			],
+			[
+				"_tile",
+				"_tilesRenderY"
+			],
+			[
+				"_tilesRe",
+				"_tilesRenderStepX"
+			],
+			[
+				"_sq",
+				"_renderSquareArray"
+			],
+			[
+				"_squ",
+				"_renderSquareArray\tvar"
+			],
+			[
+				"renderInde",
+				"renderIndexRows\tInt"
+			],
+			[
+				"renderIde",
+				"renderIndexRows\tInt"
+			],
+			[
+				"_idex",
+				"_tilesRenderX\tInt"
+			],
+			[
+				"render",
+				"renderIndexCols\tInt"
+			],
+			[
+				"_groun",
+				"_groundTileLayer\topenfl.display.Tilemap"
+			],
+			[
+				"getTile",
+				"getTileAt"
+			],
+			[
+				"inde",
+				"groundTileLayerIndex\tInt"
+			],
+			[
+				"_las",
+				"_lastSceneX\tFloat"
+			],
+			[
+				"_last",
+				"_lastSceneY\tFloat"
+			],
+			[
+				"_tils",
+				"_TILESIZE\tInt"
+			],
+			[
+				"Widt",
+				"_stageWidth\tInt"
+			],
+			[
+				"last",
+				"lastDxW\tFloat"
+			],
+			[
+				"check",
+				"checkedTiles"
+			],
+			[
+				"stah",
+				"stageHeight\tInt"
+			],
+			[
+				"draw",
+				"drawRect(...)\tVoid"
+			],
+			[
+				"MOU",
+				"MOUSE_MOVE\tString"
+			],
+			[
+				"_move",
+				"_moveUp\tBool"
+			],
+			[
+				"Stage",
+				"stageHeight\tInt"
+			],
+			[
+				"get",
+				"getCurrentScene(  )\tPlayingScene"
+			],
+			[
+				"_timetick",
+				"_timeTickGlobal\tInt"
+			],
+			[
+				"_fp",
+				"_gameFps\tInt"
+			],
+			[
+				"fps",
+				"_gameFps\tInt"
+			],
+			[
+				"_time",
+				"_timeTickGame\tInt"
+			],
+			[
+				"_yea",
+				"_year\tInt"
+			],
+			[
+				"stage",
+				"stageHeight\tInt"
+			],
+			[
+				"oncli",
+				"onClickPlay(...)\tVoid"
+			],
+			[
+				"sta",
+				"stageX\tFloat"
+			],
+			[
+				"MouseEvent",
+				"MouseEvent\topenfl.events"
+			],
+			[
+				"M",
+				"MOUSE_WHEEL\tString"
+			],
+			[
+				"sca",
+				"scaleX\tFloat"
+			],
+			[
+				"Mou",
+				"MouseEvent\topenfl.events"
+			],
+			[
+				"compon",
+				"_components\thaxe.ds.Vector<Component>"
+			],
+			[
+				"compo",
+				"componentName"
+			],
+			[
+				"comp",
+				"component\tComponent"
+			],
+			[
+				"_left",
+				"_leftLegHealth\tFloat"
+			],
+			[
+				"end",
+				"end\tFloat"
+			],
+			[
+				"str",
+				"str\tFloat"
+			],
+			[
+				"Float",
+				"Float\tclass"
+			],
+			[
+				"alive",
+				"aliveEntites"
+			],
+			[
+				"tilei",
+				"tileIndex"
+			],
+			[
+				"component",
+				"_components\thaxe.ds.Vector<Component>"
+			],
+			[
+				"Disp",
+				"DisplayObject\topenfl.display"
+			],
+			[
+				"ali",
+				"aliveEntites\tvar"
+			],
+			[
+				"creat",
+				"createEntity(...)\tEntity"
+			],
+			[
+				"Recta",
+				"Rectangle\topenfl.geom"
+			],
+			[
+				"image",
+				"_image"
+			],
+			[
+				"_",
+				"_charactersTileset\tvar"
+			],
+			[
+				"add",
+				"addComponent(...)\tComponent"
+			],
+			[
+				"_co",
+				"_components\tvar"
+			],
+			[
+				"_com",
+				"_componentsName\tvar"
+			],
+			[
+				"curren",
+				"currentTick"
+			],
+			[
+				"Timer",
+				"Timer\topenfl.utils"
+			],
+			[
+				"_game",
+				"_gameStartingScreen"
+			],
+			[
+				"main",
+				"mainSprite\tvar"
+			],
+			[
+				"_games",
+				"_gameStartingScreen\tvar"
+			],
+			[
+				"_gr",
+				"_gridFullSize\tvar"
+			],
+			[
+				"Array",
+				"Array<T>\tclass"
+			],
+			[
+				"_g",
+				"_gridTileMap\topenfl.Vector<GameTile>"
+			],
+			[
+				"left",
+				"leftTile"
+			],
+			[
+				"block",
+				"blockType\tInt"
+			],
+			[
+				"b",
+				"blockType\tInt"
+			],
+			[
+				"current",
+				"currentSolidWidth\tInt"
+			],
+			[
+				"cure",
+				"currentRiverWidth\tInt"
+			],
+			[
+				"river",
+				"riverWidth\tInt"
+			],
+			[
+				"Sprite",
+				"Sprite\topenfl.display"
+			],
+			[
+				"min",
+				"minimumRiverWidth\tInt"
+			],
+			[
+				"remove",
+				"removeChild(...)\topenfl.display.DisplayObject"
+			],
+			[
 				"Mouse",
 				"MouseEvent\topenfl.events"
 			],
@@ -68,20 +372,12 @@
 				"Bitmap\topenfl.display"
 			],
 			[
-				"_",
-				"_gridSize"
-			],
-			[
 				"gr",
 				"gridSize\tInt"
 			],
 			[
 				"tile",
 				"tileGroundSize\tInt"
-			],
-			[
-				"_gr",
-				"_groundTileLayer\topenfl.display.Tilemap"
 			],
 			[
 				"Po",
@@ -110,10 +406,6 @@
 			[
 				"Bit",
 				"Bitmap\topenfl.display"
-			],
-			[
-				"add",
-				"addTile(...)\topenfl.display.Tile"
 			],
 			[
 				"scle",
@@ -156,14 +448,6 @@
 				"groundType\tInt"
 			],
 			[
-				"cure",
-				"currentRockSizeX"
-			],
-			[
-				"last",
-				"lastSizeX"
-			],
-			[
 				"rock",
 				"rocksMinSize\tvar"
 			],
@@ -178,10 +462,6 @@
 			[
 				"event",
 				"Event\topenfl.events"
-			],
-			[
-				"Mou",
-				"MouseEvent\topenfl.events"
 			],
 			[
 				"Event",
@@ -234,308 +514,25 @@
 			[
 				"start",
 				"startGameButtonText"
-			],
-			[
-				"s",
-				"Sprite"
-			],
-			[
-				"E",
-				"Event\tclass"
-			],
-			[
-				"weapo",
-				"weaponSprite"
-			],
-			[
-				"remov",
-				"removeChild(...)\topenfl.display.DisplayObject"
-			],
-			[
-				"rem",
-				"removeWeapon(  )\tUnknown<9>"
-			],
-			[
-				"Get",
-				"getSprite(  )\tUnknown<2>"
-			],
-			[
-				"M",
-				"MOUSE_MOVE\tString"
-			],
-			[
-				"mouse",
-				"MouseEvent\tflash.events"
-			],
-			[
-				"set",
-				"setAsBox( hx : Float , hy : Float )\tVoid"
-			],
-			[
-				"B2B",
-				"B2BodyDef\tbox2D.dynamics"
-			],
-			[
-				"get",
-				"getFixtureList(...)\tbox2D.dynamics.B2Fixture"
-			],
-			[
-				"turn",
-				"myGameTurnControl\tGameTurnControl"
-			],
-			[
-				"_all",
-				"_allPlayerOnScene\tArray<Dynamic>"
-			],
-			[
-				"Scne",
-				"ScenePlayerActor\tclass"
-			],
-			[
-				"stage",
-				"stageHeight\tInt"
-			],
-			[
-				"tage",
-				"stageWidth\tInt"
-			],
-			[
-				"stag",
-				"stageWidth\tInt"
-			],
-			[
-				"rec",
-				"scrollRect\topenfl.geom.Rectangle"
-			],
-			[
-				"Timer",
-				"Timer\tflash.utils"
-			],
-			[
-				"textF",
-				"TextFieldType\tflash.text"
-			],
-			[
-				"Scene",
-				"ScenePlayerActor\tclass"
-			],
-			[
-				"max",
-				"maxSceneHeight\tInt"
-			],
-			[
-				"sc",
-				"scaleX\tFloat"
-			],
-			[
-				"maxWid",
-				"maxWidthPerPolygon\tFloat"
-			],
-			[
-				"maxWi",
-				"maxWidthPerPolygon\tFloat"
-			],
-			[
-				"coord",
-				"coordsArray\tArray<Dynamic>"
-			],
-			[
-				"cre",
-				"createFixture"
-			],
-			[
-				"polygon",
-				"polygonArray"
-			],
-			[
-				"wor",
-				"worldScale"
-			],
-			[
-				"right",
-				"rightVertexY\tvar"
-			],
-			[
-				"nextR",
-				"nextRightVertexX"
-			],
-			[
-				"left",
-				"leftVertexX"
-			],
-			[
-				"nextRigh",
-				"nextRightVertexY\tvar"
-			],
-			[
-				"next",
-				"nextRightVertexX\tvar"
-			],
-			[
-				"generate",
-				"generatePolygons\tfunction"
-			],
-			[
-				"B2Fixture",
-				"B2FixtureDef\tbox2D.dynamics"
-			],
-			[
-				"update",
-				"updateSprite(  )\tVoid"
-			],
-			[
-				"worldS",
-				"worldScale\tInt"
-			],
-			[
-				"_scne",
-				"_scenesToStop\tvar"
-			],
-			[
-				"_sce",
-				"_scenesToStop"
-			],
-			[
-				"_scenes",
-				"_scenesToStop\tvar"
-			],
-			[
-				"Display",
-				"DisplayObject\tflash.display"
-			],
-			[
-				"L",
-				"Lib\tflash"
-			],
-			[
-				"B2Body",
-				"B2BodyDef\tbox2D.dynamics"
-			],
-			[
-				"world",
-				"worldScale\tInt"
-			],
-			[
-				"worl",
-				"worldScale\tInt"
-			],
-			[
-				"_stage",
-				"_stageHeight\tInt"
-			],
-			[
-				"Even",
-				"EventDispatcher\tflash.events"
-			],
-			[
-				"remove",
-				"removeEventListener(...)\tVoid"
-			],
-			[
-				"sha",
-				"shapes"
-			],
-			[
-				"se",
-				"setAsBox( hx : Float , hy : Float )\tVoid"
-			],
-			[
-				"B2sha",
-				"B2PolygonShape\tbox2D.collision.shapes"
-			],
-			[
-				"b2S",
-				"B2Shape\tbox2D.collision.shapes"
-			],
-			[
-				"Dis",
-				"DisplayObjectContainer\tflash.display"
-			],
-			[
-				"new",
-				"newPlayer"
-			],
-			[
-				"linVel",
-				"linVelocityY\tFloat"
-			],
-			[
-				"world_s",
-				"world_scale\tFloat"
-			],
-			[
-				"world_",
-				"world_scale\tFloat"
-			],
-			[
-				"LAU",
-				"LAUNCH_POINT"
-			],
-			[
-				"Add",
-				"addEventListener(...)\tVoid"
-			],
-			[
-				"Player",
-				"PlayerEvent"
-			],
-			[
-				"_a",
-				"_actorsToRemove"
-			],
-			[
-				"in",
-				"instance(...)\tinstance.S"
-			],
-			[
-				"B2Contact",
-				"B2Contact\tbox2D.dynamics.contacts"
-			],
-			[
-				"setC",
-				"setContactListener(...)\tVoid"
-			],
-			[
-				"B2Contac",
-				"B2ContactListener\tbox2D.dynamics"
-			],
-			[
-				"lef",
-				"leftWall"
-			],
-			[
-				"line",
-				"lineTo( x : Float , y : Float )\tVoid"
-			],
-			[
-				"B2Fixt",
-				"B2FixtureDef\tbox2D.dynamics"
-			],
-			[
-				"array",
-				"arrayOfCoordinates"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "package;\n\nimport openfl.display.Sprite;\n\nclass Game \n{\n\n\tprivate var _currentScene:Dynamic;\n\tprivate var _mainSprite:Main;\n\tprivate var _allScenes:Array<Sprite>;\n\tprivate var _userInterface:UserInterface;\n\n\tpublic function new(mainSprite)\n\t{\n\t\t_mainSprite = mainSprite;\n\t\tinit();\n\t}\n\n\tpublic function init()\n\t{\n\t\t_allScenes = new Array();\n\t\t//create some starting scenes like options, load, etc;\n\t\t_currentScene  = new WelcomeScene(this);\n\t\t_mainSprite.addChild(_currentScene);\n\t\t_allScenes.push(_currentScene);\n\n\t}\n\n\tpublic function toWelcomeScene()\n\t{\n\t\tif (_currentScene != WelcomeScene)\n\t\t\t_mainSprite.removeChild(_currentScene);\n\n\t\tfor (i in 0..._allScenes.length)\n\t\t{\n\t\t\tvar scene = _allScenes[i];\n\t\t\tif (Std.is(scene, WelcomeScene))\n\t\t\t{\n\t\t\t\t_currentScene = scene;\n\t\t\t\t_mainSprite.addChild(scene);\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\n\n\t\t_currentScene = new WelcomeScene(this);\n\t\t_mainSprite.addChild(_currentScene);\n\n\t}\n\n\tpublic function toPlayingScene()\n\t{\n\n\t\tif (_currentScene != PlayingScene)\n\t\t\t_mainSprite.removeChild(_currentScene);\n\n\t\tfor (i in 0..._allScenes.length)\n\t\t{\n\t\t\tvar scene = _allScenes[i];\n\t\t\tif (Std.is(scene, PlayingScene))\n\t\t\t{\n\t\t\t\t_currentScene = scene;\n\t\t\t\t_mainSprite.addChild(scene);\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\n\n\t\t_currentScene = new PlayingScene(this);\n\t\t_mainSprite.addChild(_currentScene);\n\n\t\tif (_userInterface == null)\n\t\t{\n\t\t\t_userInterface = new UserInterface(this);\n\t\t\t_mainSprite.addChild(_userInterface);\n\t\t}\n\t\t\n\t}\n\n\tpublic function toOptionScene()\n\t{\n\t\t\n\t}\n\n\tpublic function toScene(scene)\n\t{\n\t\t\n\t}\n\n\tpublic function getUI()\n\t{\n\t\treturn _userInterface;\n\t}\n}",
-			"file": "source/Game.hx",
-			"file_size": 1668,
-			"file_write_time": 131236743728560416,
+			"file": "source/UserInterface.hx",
 			"settings":
 			{
-				"buffer_size": 1579,
+				"buffer_size": 10774,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "source/UserInterface.hx",
+			"file": "source/Select.hx",
 			"settings":
 			{
-				"buffer_size": 879,
+				"buffer_size": 224,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -544,36 +541,66 @@
 			"file": "source/PlayingScene.hx",
 			"settings":
 			{
-				"buffer_size": 9273,
+				"buffer_size": 67490,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "package;\n\nimport openfl.display.Bitmap;\nimport openfl.display.BitmapData;\nimport openfl.display.Sprite;\nimport openfl.Assets;\nimport openfl.Lib;\nimport openfl.text.TextField;\nimport openfl.events.MouseEvent;\nimport openfl.text.TextFormat;\nimport openfl.text.TextFormatAlign;\n\n\nclass WelcomeScene extends Sprite\n{\n\n\tprivate var _myGame:Game;\n\tprivate var _startGameButton:Sprite;\n\n\tpublic function new(game)\n\t{\n\t\tsuper();\n\t\t_myGame = game;\n\t\tinit();\n\t}\n\n\tprivate function init()\n\t{\n\t\tcreateBackgroundPic();\n\t\tcreateButtons();\n\t\taddEventListener (MouseEvent.MOUSE_MOVE, onMouseMove);\n\t}\n\n\tprivate function createBackgroundPic()\n\t{\n\t\tvar bitmap = new Bitmap (Assets.getBitmapData (\"assets/images/dadlogo.png\"));\n\t\taddChild (bitmap);\n\n\t\tbitmap.x = (Lib.current.stage.stageWidth - bitmap.width) / 2;\n\t\tbitmap.y = (Lib.current.stage.stageHeight - bitmap.height) / 2;\n\n\t}\n\n\tprivate function createButtons()\n\t{\n\t\t_startGameButton = new Sprite();\n\t\t_startGameButton.graphics.beginFill( 0xFF0000 );\n        _startGameButton.graphics.drawRoundRect( 0, 0, 180, 40, 10, 10 );\n        _startGameButton.graphics.endFill();\n        addChild(_startGameButton);\n\n        var startGameButtonTextFormat:TextFormat = new TextFormat(\"Verdana\", 18, 0xffffff, true);\n\t\tstartGameButtonTextFormat.align = TextFormatAlign.CENTER;\n\n        var startGameButtonText = new TextField();\n        startGameButtonText.width = 180;\n        startGameButtonText.height = 40;\n        startGameButtonText.defaultTextFormat = startGameButtonTextFormat;\n        startGameButtonText.text = \"Start\";\n        startGameButtonText.selectable = false;\n        addChild(startGameButtonText);\n\n        startGameButtonText.addEventListener( MouseEvent.CLICK, onClick );\n\n        startGameButtonText.x = (Lib.current.stage.stageWidth - startGameButtonText.width) / 2 + 400;\n        startGameButtonText.y = (Lib.current.stage.stageHeight - startGameButtonText.height) / 2 + 210;\n\n        _startGameButton.x = (Lib.current.stage.stageWidth - _startGameButton.width) / 2 + 400;\n        _startGameButton.y = (Lib.current.stage.stageHeight - _startGameButton.height) / 2 + 200;\n\t}\n\n\tprivate function onClick( event:MouseEvent )\n    {\n    \t_startGameButton.graphics.clear();\n    \t_startGameButton.graphics.beginFill(0x00aa00);\n    \t//_startGameButton.graphics.drawRoundRect( 0, 0, 180, 40, 10, 10 );\n    \t_startGameButton.graphics.endFill();\n\n        //go to game and start playing Scene;\n        _myGame.toPlayingScene();\n    }\n\n    private function onMouseMove(e:MouseEvent)\n    {\n    \t\n    }\n}",
-			"file": "source/WelcomeScene.hx",
-			"file_size": 2496,
-			"file_write_time": 131157188987217337,
+			"file": "source/GameTile.hx",
 			"settings":
 			{
-				"buffer_size": 2538,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "source/PathfinderMap.hx",
-			"settings":
-			{
-				"buffer_size": 565,
+				"buffer_size": 2334,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "source/SceneCharacterActor.hx",
+			"file": "source/Entity.hx",
 			"settings":
 			{
-				"buffer_size": 4780,
+				"buffer_size": 1807,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/Component.hx",
+			"settings":
+			{
+				"buffer_size": 421,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/Move.hx",
+			"settings":
+			{
+				"buffer_size": 1168,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/Draw.hx",
+			"settings":
+			{
+				"buffer_size": 1545,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/LifeCircle.hx",
+			"settings":
+			{
+				"buffer_size": 1944,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/Stats.hx",
+			"settings":
+			{
+				"buffer_size": 2652,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -611,18 +638,49 @@
 	},
 	"expanded_folders":
 	[
-		"/C/projects/DieAnotherDay",
-		"/C/projects/DieAnotherDay/source",
-		"/C/projects/DieAnotherDay/source/pathfinder",
-		"/C/HaxeToolkit/haxe/lib/openfl"
 	],
 	"file_history":
 	[
+		"/C/projects/DieAnotherDay/DieAnotherDay_v0.11.sublime-project",
+		"/C/projects/DieAnotherDay_v0.11/source/PlayingScene.hx",
+		"/C/HaxeToolkit/haxe/lib/openfl-samples/4,0,0/features/display/SimpleOpenGLView/Source/Main.hx",
+		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3/openfl/display/Tilemap.hx",
+		"/C/Users/aakorolev/Desktop/PanZoomMap.as",
+		"/C/Users/aakorolev/Desktop/PanZoomTest.as",
+		"/C/projects/DieAnotherDay_v0.11/source/EntitySystem.hx",
+		"/C/HaxeToolkit/haxe/lib/openfl/4,0,3/openfl/display/Bitmap.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/SceneSystem.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/GameStartingScreen.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/PreStartOptionScreen.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/OptionScreen.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/GameTile.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/Component.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/Fight.hx",
+		"/C/projects/DieAnotherDay/source/PlayingScene.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/Character.hx",
+		"/C/projects/DieAnotherDay/source/SceneCharacterActor.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/Game.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/GameOptionScreen.hx",
+		"/C/Users/aakorolev/Documents/GitHub/roaches-box2d-haxe/source/Scene.hx",
+		"/C/Users/aakorolev/Documents/GitHub/roaches-box2d-haxe/source/TimeMaster.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/gameOptionScreen.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/StartingScene.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/Coordinates.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/UserInterface.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/OptionScene.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/Scene.hx",
+		"/C/projects/DieAnotherDay/source/Game.hx",
+		"/C/projects/DieAnotherDay/source/UserInterface.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/GameSystem.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/Main.hx",
+		"/C/projects/DieAnotherDay_v0.11/source/gridTileMap.hx",
+		"/C/projects/DieAnotherDay/source/TileMap.hx",
+		"/C/projects/DieAnotherDay/source/Tiles.hx",
+		"/C/projects/DieAnotherDay/source/PathfinderMap.hx",
+		"/C/projects/DieAnotherDay/source/WelcomeScene.hx",
+		"/C/projects/Noname/Data/Scripts/Main.cpp",
 		"/C/projects/New_DieAnotherDay/source/Game.hx",
 		"/C/projects/DieAnotherDay/source/Main.hx",
-		"/C/projects/DieAnotherDay/source/TileMap.hx",
-		"/C/projects/DieAnotherDay/source/WelcomeScene.hx",
-		"/C/projects/DieAnotherDay/source/Tiles.hx",
 		"/C/Users/aakorolev/Downloads/pathfinder-master/demo/src/demo/MapData.hx",
 		"/C/Users/aakorolev/Downloads/pathfinder-master/demo/src/Config.hx",
 		"/C/Users/aakorolev/Downloads/pathfinder-master/demo/src/Main.hx",
@@ -710,38 +768,7 @@
 		"/c/haxetoolkit/haxe/lib/box2d/1,2,3/samples/TestBed/Source/Test.hx",
 		"/C/Users/Admin/Desktop/teaching/TooManyShoots/source/Main.as",
 		"/C/Users/Admin/Desktop/teaching/HelloWorld/Project.xml",
-		"/C/Users/Admin/Desktop/teaching/HelloWorld/source/Main.hx",
-		"/C/HaxeToolkit/haxe/lib/box2d/1,2,3/samples/TestBed/project.xml",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/graphics/BulletView.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/nodes/AnimationNode.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/components/Animation.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/components/Spaceship.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/GameConfig.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/systems/RenderSystem.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/systems/MovementSystem.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/systems/MotionControlSystem.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/systems/GunControlSystem.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/Player.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/Enemy.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/CombatHUD.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/HUD.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/Coin.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/PlayState.hx",
-		"/C/Users/Admin/Desktop/teaching/asteroids/net/richardlord/asteroids/Main.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/fixel/FlxSprite.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/MenuState.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/Main.hx",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/Project.xml",
-		"/c/Users/Admin/Desktop/teaching/HelloWorld/source/flixel/FlxSprite.hx",
-		"/C/Users/Admin/Desktop/teaching/HelloWorld/source/MenuState.hx",
-		"/C/HaxeToolkit/haxe/lib/flixel-demos/2,1,0/Tutorials/TurnBasedRPG/source/HUD.hx",
-		"/C/Users/Admin/Documents/GitHub/shoot-them-all/index.css",
-		"/C/Users/Admin/Desktop/teaching/teaching_2.html",
-		"/C/Users/Admin/AppData/Roaming/Sublime Text 3/Packages/Haxe/Support/Haxe.sublime-settings",
-		"/C/Users/Admin/Desktop/teaching/teaching_haxe/main.js",
-		"/C/Users/Admin/Desktop/arpg/index.js",
-		"/C/Users/Admin/Desktop/arpg/common/tool.js",
-		"/C/Users/Admin/Documents/GitHub/hory-card-v2.0/if.css"
+		"/C/Users/Admin/Desktop/teaching/HelloWorld/source/Main.hx"
 	],
 	"find":
 	{
@@ -759,6 +786,27 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			";\n",
+			"608",
+			"576",
+			"544",
+			"512",
+			"480",
+			"448",
+			"416",
+			"384",
+			"352",
+			"320",
+			"288",
+			"256",
+			"224",
+			"192",
+			"160",
+			"128",
+			"96",
+			"64",
+			"32",
+			"public",
 			"tileSize",
 			"lastLeftPoint",
 			"gridSize",
@@ -802,6 +850,24 @@
 		"regex": false,
 		"replace_history":
 		[
+			"_TILESIZE*19",
+			"_TILESIZE*18",
+			"_TILESIZE*17",
+			"_TILESIZE*16",
+			"_TILESIZE*15",
+			"_TILESIZE*14",
+			"_TILESIZE*13",
+			"_TILESIZE*12",
+			"_TILESIZE*11",
+			"_TILESIZE*9",
+			"_TILESIZE*8",
+			"_TILESIZE*7",
+			"_TILESIZE*6",
+			"_TILESIZE*5",
+			"_TILESIZE*4",
+			"_TILESIZE*3",
+			"_TILESIZE*2",
+			"_TILESIZE",
 			"_tileSize",
 			"firstLeftPoint",
 			"_gridSize",
@@ -822,24 +888,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "source/Game.hx",
+					"file": "source/UserInterface.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1579,
+						"buffer_size": 10774,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1475,
-								1475
+								10771,
+								10771
 							]
 						],
 						"settings":
@@ -849,39 +915,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 315.0,
+						"translation.y": 4967.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "source/UserInterface.hx",
+					"file": "source/Select.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 879,
+						"buffer_size": 224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								219,
-								219
+								128,
+								128
 							]
 						],
 						"settings":
 						{
 							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -890,15 +957,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9273,
+						"buffer_size": 67490,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1429,
-								1377
+								6205,
+								6205
 							]
 						],
 						"settings":
@@ -908,64 +975,184 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 526.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "source/WelcomeScene.hx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2530,
-								2530
-							]
-						],
-						"settings":
-						{
-							"haxe-build-id": 0,
-							"syntax": "Packages/Haxe/Haxe.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 2026.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "source/PathfinderMap.hx",
+					"buffer": 3,
+					"file": "source/GameTile.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 565,
+						"buffer_size": 2334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								556,
-								556
+								809,
+								826
 							]
 						],
 						"settings":
 						{
 							"haxe-build-id": 0,
 							"syntax": "Packages/Haxe/Haxe.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/Entity.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								549,
+								549
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/Component.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								234,
+								234
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "source/Move.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "source/Draw.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1545,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1036,
+								1036
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "source/LifeCircle.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1005,
+								1005
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -975,20 +1162,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "source/SceneCharacterActor.hx",
+					"buffer": 9,
+					"file": "source/Stats.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4780,
+						"buffer_size": 2652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4045,
-								4045
+								2416,
+								2416
 							]
 						],
 						"settings":
@@ -998,10 +1185,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2025.0,
+						"translation.y": 966.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1038,15 +1225,19 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 94.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "DieAnotherDay.sublime-project",
+	"project": "DieAnotherDay_v0.11.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 82.0
 	},
 	"save_all_on_build": true,
 	"select_file":

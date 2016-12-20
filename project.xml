@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="DieAnotherDay" package="com.sample.dieanotherday" version="1.0.0" company="Company Name" />
-	<app main="Main" path="Export" file="DieAnotherDay" />
+	<meta title="DieAnotherDay_v0.11" package="com.sample.dieanotherday" version="0.1.1" company="Company Name" />
+	<app main="Main" path="Export" file="DieAnotherDay_v0.11" />
 	
-	<source path="Source" />
+	<source path="source" />
 	
 	<haxelib name="openfl" />
 	
-	<assets path="Assets" rename="assets" />
+	<assets path="assets" />
 
 	<window background="#000000" fps="60" />
 
-	<window width="1920" height="1080" unless="mobile" />
+	<window width="1366" height="768" unless="mobile" />
 	
 </project>
 

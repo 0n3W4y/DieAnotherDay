@@ -1,92 +1,119 @@
 package;
 
 import openfl.display.Sprite;
+import openfl.Lib;
+import flash.system.System;
 
 class Game 
 {
+	private var _sceneSystem:SceneSystem;
+	private var _entitySystem:EntitySystem;
+	private var _gameSystem:GameSystem;
+	private var _gameStartingScreen:GameStartingScreen;
+	private var _gameOptionScreen:GameOptionScreen;
+	private var _mainSprite:Sprite;
 
-	private var _currentScene:Dynamic;
-	private var _mainSprite:Main;
-	private var _allScenes:Array<Sprite>;
-	private var _userInterface:UserInterface;
-
-	public function new(mainSprite)
+	public function new(gameSystem:GameSystem):Void
 	{
-		_mainSprite = mainSprite;
+		_gameSystem = gameSystem;
+		_mainSprite = _gameSystem.getMainSprite();
 		init();
 	}
 
-	public function init()
+	private function init():Void
 	{
-		_allScenes = new Array();
-		//create some starting scenes like options, load, etc;
-		_currentScene  = new WelcomeScene(this);
-		_mainSprite.addChild(_currentScene);
-		_allScenes.push(_currentScene);
-
+		createSceneSystem();
+		createEntitySystem();
 	}
 
-	public function toWelcomeScene()
+	private function createStartingScreen():Void
 	{
-		if (_currentScene != WelcomeScene)
-			_mainSprite.removeChild(_currentScene);
-
-		for (i in 0..._allScenes.length)
-		{
-			var scene = _allScenes[i];
-			if (Std.is(scene, WelcomeScene))
-			{
-				_currentScene = scene;
-				_mainSprite.addChild(scene);
-				return;
-			}
-		}
-
-		_currentScene = new WelcomeScene(this);
-		_mainSprite.addChild(_currentScene);
-
+		_gameStartingScreen = new GameStartingScreen(this);
+		_mainSprite.addChild(_gameStartingScreen);
 	}
 
-	public function toPlayingScene()
+	private function createOptionScreen():Void
 	{
-
-		if (_currentScene != PlayingScene)
-			_mainSprite.removeChild(_currentScene);
-
-		for (i in 0..._allScenes.length)
-		{
-			var scene = _allScenes[i];
-			if (Std.is(scene, PlayingScene))
-			{
-				_currentScene = scene;
-				_mainSprite.addChild(scene);
-				return;
-			}
-		}
-
-		_currentScene = new PlayingScene(this);
-		_mainSprite.addChild(_currentScene);
-
-		if (_userInterface == null)
-		{
-			_userInterface = new UserInterface(this);
-			_mainSprite.addChild(_userInterface);
-		}
-		
+		_gameOptionScreen = new GameOptionScreen(this);
+		_mainSprite.addChild(_gameOptionScreen);
 	}
 
-	public function toOptionScene()
+	private function createSceneSystem():Void
+	{
+		_sceneSystem = new SceneSystem(this, _mainSprite);
+	}
+
+	private function createEntitySystem():Void
+	{
+		_entitySystem = new EntitySystem(this);
+	}
+
+
+	public function getEntitySystem():EntitySystem
+	{
+		return _entitySystem;
+	}
+
+	public function getSceneSystem():SceneSystem
+	{
+		return _sceneSystem;
+	}
+
+	public function start():Void
+	{
+		createStartingScreen();
+	}
+
+	public function stop():Void
 	{
 
 	}
 
-	public function toScene(scene)
+	public function pause():Void
 	{
 		
 	}
 
-	public function getUI()
+	public function exit():Void
 	{
-		return _userInterface;
+		System.exit(0);
 	}
+
+	public function switchScreen(screen:String):Void
+	{
+		if (screen == "Options")
+		{
+			if ( _gameOptionScreen != null)
+				_mainSprite.addChild(_gameOptionScreen);
+			else
+				createOptionScreen();
+		}
+		else if (screen == "StartingScreen")
+		{
+			if (_gameStartingScreen != null)
+				_mainSprite.addChild(_gameStartingScreen);
+			else
+				createStartingScreen();
+		}
+	}
+
+	public function removeScreen(screen:String):Void
+	{
+		if (screen == "Options")
+		{
+			if ( _gameOptionScreen != null)
+				_mainSprite.removeChild(_gameOptionScreen);
+		}
+		else if (screen == "StartingScreen")
+		{
+			if (_gameStartingScreen != null)
+				_mainSprite.removeChild(_gameStartingScreen);
+		}
+	}
+
+	public function destroyScreen()
+	{
+		
+	}
+
 }

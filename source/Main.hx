@@ -1,33 +1,27 @@
 package;
 
-
-import openfl.display.Bitmap;
-import openfl.display.BitmapData;
 import openfl.display.Sprite;
-import openfl.Assets;
-import openfl.Lib;
 
 class Main extends Sprite {
 	
-	private var game:Game;
-	private var isCreated:Bool = false;
+	private var _gameSystem:GameSystem;
+	private var _isCreated:Bool = false;
 	
-	public function new () 
+	public function new():Void
 	{
-		super ();
+		super();
 		
 		init();
-		
 	}
-	private function init()
+	private function init():Void
 	{
-		if(!isCreated) createGame();
+		if(!_isCreated) createGameSystem();
 	}
 
-	private function createGame()
+	private function createGameSystem():Void
 	{
-		game = new Game(this);
-		isCreated = true;
+		_gameSystem = new GameSystem(this);
+		_isCreated = true;
 	}
 	
 }
