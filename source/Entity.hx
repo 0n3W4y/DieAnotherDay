@@ -10,13 +10,13 @@ class Entity
 	public var id:String;
 
 	private var _tileSize:Int;
-	private var _components:Vector<Dynamic>;
-	private var _componentsNew:Vector<Component>;
+	private var _components:Array<Dynamic>;
+	private var _componentsNew:Array<Component>;
 
 
 	public function new(type:String, race:String, subType:String, id:String, tileSize:Int):Void
 	{
-		_components = new Vector(0);
+		this._components = [];
 		this.type = type;
 		this.subType = subType;
 		this.id = id;
@@ -66,17 +66,8 @@ class Entity
 				return;
 			}
 		}
-
-		for (j in 0..._components.length)			
-		{
-			if (_components[j] == null)
-			{
-				index = j;
-				break;
-			}
-		}
 	
-		_components.set(index, component);
+		_components.push(component);
 	}
 
 	public function removeComponent(componentName:String):Void

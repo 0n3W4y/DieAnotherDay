@@ -111,7 +111,7 @@ class PlayingScene extends Sprite
 
 		// импортим атлас, заполняем массив индексов для тайлов.
 		createGroundTileLayer(); 
-		//createAboveTileLayer(); //rocks; trees, bushes, grass;walls, beds, and other;
+		createAboveTileLayer(); //rocks; trees, bushes, grass;walls, beds, and other;
 		//createEffectsTileLayer(); //fire, blood, snow, other;
 		//createCharacterTiles(); .. all characters, robots, animals, and other;
 		//need to create ammunition, dress, weapons, other;
